@@ -1,0 +1,66 @@
+{
+  "id": "e9e40cc4-5822-4055-addb-ccc22aef624d",
+  "questions": [
+    {
+      "question": "What is the capital of Australia?",
+      "answer": "Canberra",
+      "hint": "It's not Sydney or Melbourne!"
+    },
+    {
+      "question": "Which element has the chemical symbol 'Fe'?",
+      "answer": "Iron",
+      "hint": "It's what you need to pump in the gym!"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "hint": "It's named after the king of the Roman gods."
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answer": "William Shakespeare",
+      "hint": "He's the bard from Stratford-upon-Avon."
+    },
+    {
+      "question": "Which ocean is the smallest in the world?",
+      "answer": "Arctic Ocean",
+      "hint": "It's the one with polar bears."
+    },
+    {
+      "question": "Who painted the 'Mona Lisa'?",
+      "answer": "Leonardo da Vinci",
+      "hint": "He's also famous for The Last Supper."
+    },
+    {
+      "question": "What year did the Titanic sink?",
+      "answer": "1912",
+      "hint": "It's in the early 1900s, before the First World War."
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "answer": "Diamond",
+      "hint": "It's also a girl's best friend."
+    },
+    {
+      "question": "Which language is the most spoken worldwide?",
+      "answer": "Chinese",
+      "hint": "Think of the country with the largest population."
+    },
+    {
+      "question": "Who was the first President of the United States?",
+      "answer": "George Washington",
+      "hint": "He's on the one-dollar bill."
+    }
+  ],
+  "current_question_index": 0,
+  "players": {},
+  "scoreboard": {
+    "scores": {}
+  },
+  "state": "Pending",
+  "category": "General",
+  "difficulty": 5,
+  "num_of_questions": 10,
+  "age_group": "Any",
+  "hint_level": 3
+}

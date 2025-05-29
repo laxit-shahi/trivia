@@ -1,8 +1,8 @@
 {
   "background": false,
-  "created_at": 1748498846,
+  "created_at": 1748502587,
   "error": null,
-  "id": "resp_6837f99e745c8198a78edee443aac29b082165babc070221",
+  "id": "resp_6838083b8da8819899fb65dfdaa78c1d0fcd299d81d6430d",
   "incomplete_details": null,
   "instructions": "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.",
   "max_output_tokens": null,
@@ -14,11 +14,11 @@
       "content": [
         {
           "annotations": [],
-          "text": "{\"questions\":[{\"question\":\"What element, with the atomic number 79, is known for its use in jewelry and electronics?\",\"answer\":\"Gold\",\"hint\":\"\"},{\"question\":\"Which author wrote the dystopian novel 'Fahrenheit 451'?\",\"answer\":\"Ray Bradbury\",\"hint\":\"\"}]}",
+          "text": "{\"questions\":[{\"question\":\"In which city would you find the famous bridge known as 'Golden Gate'?\",\"answer\":\"San Francisco\",\"hint\":\"\"},{\"question\":\"What is the chemical symbol for the element with atomic number 79?\",\"answer\":\"Au (Gold)\",\"hint\":\"\"}]}",
           "type": "output_text"
         }
       ],
-      "id": "msg_6837f99ee7b88198a0c78ab70ca0e91d082165babc070221",
+      "id": "msg_6838083c1fe481988d5c6c9a38db45bc0fcd299d81d6430d",
       "role": "assistant",
       "status": "completed",
       "type": "message"
@@ -33,7 +33,7 @@
   "service_tier": "default",
   "status": "completed",
   "store": true,
-  "temperature": 1.0,
+  "temperature": 1,
   "text": {
     "format": {
       "type": "text"
@@ -41,18 +41,18 @@
   },
   "tool_choice": "auto",
   "tools": [],
-  "top_p": 1.0,
+  "top_p": 1,
   "truncation": "disabled",
   "usage": {
     "input_tokens": 228,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 63,
+    "output_tokens": 61,
     "output_tokens_details": {
       "reasoning_tokens": 0
     },
-    "total_tokens": 291
+    "total_tokens": 289
   },
   "user": null
 }

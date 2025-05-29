@@ -3,6 +3,12 @@ use serde_json::json;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Question {
+    pub question: String,
+    pub answer: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum AnswerCorrectness {
     Correct,
     Partial, 

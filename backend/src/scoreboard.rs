@@ -1,6 +1,7 @@
 use std::collections::HashMap;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Default)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct Scoreboard {
     scores: HashMap<String, i32>,
 }
@@ -19,6 +20,10 @@ impl Scoreboard {
     pub fn update_score(&mut self, player_name: &str, points_change: i32) {
         let score = self.scores.entry(player_name.to_string()).or_insert(0);
         *score += points_change;
+    }
+
+    pub fn increment_score(&mut self, player_name: &str, points: i32) {
+        self.update_score(player_name, points);
     }
 
     pub fn get_player_score(&self, player_name: &str) -> Option<i32> {

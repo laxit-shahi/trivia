@@ -204,10 +204,6 @@ function GameRoom() {
   const wsRef = useRef<WebSocket | null>(null);
   const [isHost, setIsHost] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
-  const [partialVotes, setPartialVotes] = useState<{[key: string]: string[]}>({});
-  const [hasVotedOnPartials, setHasVotedOnPartials] = useState<string[]>([]);
-  const [isVotingComplete, setIsVotingComplete] = useState(false);
-  const [playersWhoSkippedVoting, setPlayersWhoSkippedVoting] = useState<string[]>([]);
 
   const fetchAllPlayers = useCallback(async (currentRoomName: string | undefined) => {
     if (!currentRoomName) return;
@@ -281,32 +277,7 @@ function GameRoom() {
           setResults(message.results || []);
           setCorrectAnswer(message.correct_answer || '');
           setIsReadyForNext(false);
-          setIsVotingComplete(false);
-          setPartialVotes({});
-          setHasVotedOnPartials([]);
           setGameState(GameState.RESULTS);
-          break;
-        case 'PartialVoteSubmitted':
-          if (message.voter_id && message.target_player_id) {
-            setPartialVotes(prev => ({
-              ...prev,
-              [message.target_player_id!]: [
-                ...(prev[message.target_player_id!] || []),
-                message.voter_id!
-              ]
-            }));
-          }
-          break;
-        case 'PlayerSkippedVoting':
-          if (message.player_id) {
-            setPlayersWhoSkippedVoting(prev => [...prev, message.player_id!]);
-          }
-          break;
-        case 'VotingComplete':
-          setIsVotingComplete(true);
-          if (message.updated_results) {
-            setResults(message.updated_results);
-          }
           break;
         case 'GameEnded':
           setFinalScores(message.final_scores || []);
@@ -328,8 +299,8 @@ function GameRoom() {
       console.error('WebSocket error (ref):', error);
     };
   }, [
-    roomName, gameState,
-    setPlayers, setCorrectAnswer, setIsVotingComplete, setResults, setFinalScores,
+    roomName,
+    setPlayers, setCorrectAnswer,
     fetchAllPlayers, setFixedNumQuestions
   ]);
 
@@ -508,9 +479,6 @@ function GameRoom() {
   );
 
   const renderResultsScreen = () => {
-    const partialAnswers = results.filter(result => result.correctness === 'Partial');
-    const hasPartialAnswers = partialAnswers.length > 0;
-    
     return (
       <div className="screen results-screen">
         <h2>Results for Question {questionNumber}</h2>
@@ -532,18 +500,12 @@ function GameRoom() {
             
             const getResultIcon = () => {
               switch (result.correctness) {
-                case 'Correct': return '✅ Correct';
-                case 'Partial': return '🟡 Partially Correct';
-                case 'Wrong': return '❌ Incorrect';
-                default: return '❌ Incorrect';
+                case 'Correct': return '✅ Correct (+2 points)';
+                case 'Partial': return '🟡 Partially Correct (+1 point)';
+                case 'Wrong': return '❌ Incorrect (0 points)';
+                default: return '❌ Incorrect (0 points)';
               }
             };
-            
-            const targetPlayer = players.find(p => p.name === result.player_name);
-            const targetPlayerId = targetPlayer?.id || '';
-            const hasVotedOnThis = hasVotedOnPartials.includes(targetPlayerId);
-            const voteCount = partialVotes[targetPlayerId]?.length || 0;
-            const isCurrentPlayerSkipped = currentPlayer && playersWhoSkippedVoting.includes(currentPlayer.id);
             
             return (
               <div key={index} className={`result-item ${getResultClass()}`}>
@@ -554,60 +516,20 @@ function GameRoom() {
                     {getResultIcon()}
                   </span>
                 </div>
-                
-                {result.correctness === 'Partial' && !isVotingComplete && currentPlayer?.id !== targetPlayerId && !isCurrentPlayerSkipped && (
-                  <div className="voting-section">
-                    <p className="vote-prompt">Should this answer get a point?</p>
-                    {!hasVotedOnThis ? (
-                      <button 
-                        onClick={() => votePartialAnswer(targetPlayerId)}
-                        className="vote-button"
-                        disabled={!!isCurrentPlayerSkipped}
-                      >
-                        👍 Vote Yes
-                      </button>
-                    ) : (
-                      <span className="voted-indicator">✅ You voted</span>
-                    )}
-                    {voteCount > 0 && (
-                      <span className="vote-count">{voteCount} vote{voteCount !== 1 ? 's' : ''}</span>
-                    )}
-                  </div>
-                )}
               </div>
             );
           })}
         </div>
         
-        {hasPartialAnswers && !isVotingComplete && !playersWhoSkippedVoting.includes(currentPlayer?.id || '') && (
-          <button onClick={skipVoting} className="action-button skip-voting-button">
-            ⏩ Skip Further Voting for this Question
+        {!isReadyForNext ? (
+          <button onClick={readyForNext} className="next-button">
+            Ready for Next Question
           </button>
-        )}
-
-        {hasPartialAnswers && !isVotingComplete ? (
-          <div className="voting-status">
-            <p className="voting-message">
-              <span className="waiting-icon">🗳️</span>
-              Vote on partial answers above, then wait for all players to finish voting...
-            </p>
-          </div>
         ) : (
-          <>
-            {!isReadyForNext ? (
-              <button onClick={readyForNext} className="next-button">
-                Ready for Next Question
-              </button>
-            ) : (
-              <div className="waiting-message">
-                <span className="waiting-icon">⏳</span>
-                {players.length > 1 
-                  ? "Waiting for other players to be ready..."
-                  : "Loading next question..."
-                }
-              </div>
-            )}
-          </>
+          <div className="waiting-message">
+            <span className="waiting-icon">⏳</span>
+            Waiting for other players to be ready...
+          </div>
         )}
       </div>
     );
@@ -701,18 +623,16 @@ function GameRoom() {
   };
 
   const submitAnswer = async () => {
-    if (!currentPlayer || !answer.trim() || hasSubmitted) return;
-    
-    const trimmedAnswer = answer.trim();
+    if (!answer.trim() || !currentPlayer || !roomName) return;
     
     try {
       await axios.post(`${API_BASE}/submit-answer`, {
         player_id: currentPlayer.id,
-        answer: trimmedAnswer,
+        answer: answer.trim(),
         room_name: roomName
       });
       
-      setSubmittedAnswer(trimmedAnswer);
+      setSubmittedAnswer(answer.trim());
       setHasSubmitted(true);
       setAnswer('');
     } catch (error) {
@@ -722,7 +642,7 @@ function GameRoom() {
   };
 
   const readyForNext = async () => {
-    if (!currentPlayer || isReadyForNext) return;
+    if (!currentPlayer || !roomName) return;
     
     try {
       await axios.post(`${API_BASE}/ready-next`, {
@@ -732,39 +652,8 @@ function GameRoom() {
       
       setIsReadyForNext(true);
     } catch (error) {
-      console.error('Failed to mark ready:', error);
-      alert('Failed to mark ready. Please try again.');
-    }
-  };
-
-  const votePartialAnswer = async (targetPlayerId: string) => {
-    if (!currentPlayer || hasVotedOnPartials.includes(targetPlayerId)) return;
-    
-    try {
-      await axios.post(`${API_BASE}/vote-partial-answer`, {
-        voter_id: currentPlayer.id,
-        target_player_id: targetPlayerId,
-        room_name: roomName
-      });
-      
-      setHasVotedOnPartials(prev => [...prev, targetPlayerId]);
-    } catch (error) {
-      console.error('Failed to vote on partial answer:', error);
-      alert('Failed to vote on partial answer. Please try again.');
-    }
-  };
-
-  const skipVoting = async () => {
-    if (!currentPlayer || !roomName) return;
-    try {
-      await axios.post(`${API_BASE}/skip-voting`, {
-        player_id: currentPlayer.id,
-        room_name: roomName
-      });
-      setPlayersWhoSkippedVoting(prev => [...prev, currentPlayer!.id]);
-    } catch (error) {
-      console.error('Failed to skip voting:', error);
-      alert('Failed to skip voting. Please try again.');
+      console.error('Failed to ready for next:', error);
+      alert('Failed to ready for next question. Please try again.');
     }
   };
 

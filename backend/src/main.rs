@@ -15,7 +15,6 @@ use tracing::info;
 use uuid::Uuid;
 use rand;
 use rand::seq::SliceRandom;
-use tower_http::cors;
 
 mod llm;
 use llm::AnswerCorrectness;
@@ -28,7 +27,6 @@ struct Player {
     current_answer: Option<String>,
     ready_for_next: bool,
     is_ready_to_start: bool,
-    has_skipped_voting: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -46,12 +44,6 @@ struct PlayerResult {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-struct PartialAnswerVote {
-    voter_id: String,
-    target_player_id: String,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "type")]
 enum GameMessage {
     PlayerJoined { player: Player },
@@ -60,12 +52,9 @@ enum GameMessage {
     QuestionPresented { question: String, question_number: u32 },
     AnswerSubmitted { player_id: String, answer: String },
     ResultsShown { results: Vec<PlayerResult>, correct_answer: String },
-    PartialVoteSubmitted { voter_id: String, target_player_id: String },
-    VotingComplete { updated_results: Vec<PlayerResult> },
     NextQuestion,
     GameEnded { final_scores: Vec<Player> },
     Error { message: String },
-    PlayerSkippedVoting { player_id: String },
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -81,7 +70,6 @@ struct GameData {
     players: HashMap<String, Player>,
     state: GameState,
     questions: Vec<Question>,
-    partial_votes: Vec<PartialAnswerVote>,
     current_results: Vec<PlayerResult>,
     tx: broadcast::Sender<GameMessage>,
 }
@@ -118,12 +106,6 @@ struct JoinRoomRequest {
     player_name: String,
 }
 
-#[derive(Debug, Deserialize)]
-struct SkipVotingRequest {
-    player_id: String,
-    room_name: String,
-}
-
 #[derive(Debug, Serialize)]
 struct CreateRoomResponse {
     room_id: String,
@@ -143,13 +125,6 @@ struct JoinRoomResponse {
 #[derive(Debug)]
 struct AppState {
     rooms: HashMap<String, Arc<Mutex<GameData>>>,
-}
-
-#[derive(Debug, Deserialize)]
-struct PartialVoteRequest {
-    voter_id: String,
-    target_player_id: String,
-    room_name: String,
 }
 
 fn create_questions() -> Vec<Question> {
@@ -424,12 +399,12 @@ async fn submit_answer(
                 {
                     let mut game = game_data_clone.lock().unwrap();
                     
-                    // Update player scores based on initial LLM check
+                    // Update player scores based on LLM check
                     for (player_id, correctness, _) in &player_results {
                         if let Some(player) = game.players.get_mut(player_id) {
                             let points = match correctness {
                                 AnswerCorrectness::Correct => 2, // 2 points for correct
-                                AnswerCorrectness::Partial => 0, // 0 points initially for partial
+                                AnswerCorrectness::Partial => 1, // 1 point for partial  
                                 AnswerCorrectness::Wrong => 0,   // 0 points for wrong
                             };
                             player.score += points;
@@ -492,10 +467,9 @@ async fn ready_for_next(
                             question: question.question.clone(),
                             question_number: next_question + 1,
                         });
-                        // Reset ready_for_next and has_skipped_voting for all players
+                        // Reset ready_for_next for all players
                         for p in game.players.values_mut() {
                             p.ready_for_next = false;
-                            p.has_skipped_voting = false; // Reset skip status
                         }
                     }
                 }
@@ -573,168 +547,6 @@ async fn generate_trivia(
     }
 }
 
-fn check_and_process_voting_completion(game: &mut GameData) {
-    // Determine players who have partial answers that need voting on
-    let partial_answer_player_ids: Vec<String> = game.current_results.iter()
-        .filter_map(|result| {
-            if matches!(result.correctness, AnswerCorrectness::Partial) {
-                game.players.iter()
-                    .find(|(_, player)| player.name == result.player_name)
-                    .map(|(id, _)| id.clone())
-            } else {
-                None
-            }
-        })
-        .collect();
-
-    if partial_answer_player_ids.is_empty() {
-        let updated_results = game.current_results.clone();
-        let _ = game.tx.send(GameMessage::VotingComplete { updated_results });
-        return;
-    }
-
-    let mut all_voting_actions_complete = true;
-    for player_in_game in game.players.values() {
-        if player_in_game.has_skipped_voting {
-            continue; 
-        }
-
-        for target_partial_player_id in &partial_answer_player_ids {
-            if &player_in_game.id == target_partial_player_id {
-                continue; 
-            }
-            let has_voted_on_this_target = game.partial_votes.iter()
-                .any(|vote| vote.voter_id == player_in_game.id && &vote.target_player_id == target_partial_player_id);
-            
-            if !has_voted_on_this_target {
-                all_voting_actions_complete = false;
-                break; 
-            }
-        }
-        if !all_voting_actions_complete {
-            break; 
-        }
-    }
-
-    if all_voting_actions_complete {
-        let mut vote_counts: HashMap<String, usize> = HashMap::new();
-        for vote in &game.partial_votes {
-            if let Some(voter) = game.players.get(&vote.voter_id) {
-                if !voter.has_skipped_voting {
-                    *vote_counts.entry(vote.target_player_id.clone()).or_insert(0) += 1;
-                }
-            }
-        }
-        
-        let active_voters_count = game.players.values().filter(|p| !p.has_skipped_voting).count();
-        let majority_threshold = if active_voters_count > 0 { active_voters_count / 2 } else { 0 };
-
-        for (player_id, vote_count) in vote_counts {
-            if let Some(player_to_score) = game.players.get_mut(&player_id) {
-                let is_target_partial = partial_answer_player_ids.contains(&player_id);
-                if is_target_partial && vote_count > majority_threshold {
-                    player_to_score.score += 2; 
-                }
-            }
-        }
-        
-        let updated_results = game.current_results.clone(); 
-        let _ = game.tx.send(GameMessage::VotingComplete { updated_results });
-    }
-}
-
-async fn vote_partial_answer(
-    State(app_state): State<SharedAppState>,
-    Json(request): Json<PartialVoteRequest>,
-) -> Result<StatusCode, StatusCode> {
-    let game_data_arc = {
-        let app = app_state.lock().unwrap();
-        app.rooms.get(&request.room_name).cloned()
-    };
-    
-    match game_data_arc {
-        Some(game_data) => {
-            let mut game = game_data.lock().unwrap();
-            
-            match game.state {
-                GameState::ShowingResults { .. } => {
-                    if let Some(voter) = game.players.get(&request.voter_id) {
-                        if voter.has_skipped_voting {
-                            return Err(StatusCode::FORBIDDEN); 
-                        }
-                    } else {
-                        return Err(StatusCode::NOT_FOUND); 
-                    }
-
-                    if request.voter_id == request.target_player_id {
-                        return Err(StatusCode::BAD_REQUEST); 
-                    }
-                    
-                    let target_player_name = game.players.get(&request.target_player_id).map(|p| p.name.clone());
-                    let has_partial_answer = target_player_name.map_or(false, |name| {
-                        game.current_results.iter().any(|result| 
-                            result.player_name == name && 
-                            matches!(result.correctness, AnswerCorrectness::Partial)
-                        )
-                    });
-                    
-                    if !has_partial_answer {
-                        return Err(StatusCode::BAD_REQUEST); 
-                    }
-                    
-                    game.partial_votes.retain(|vote| 
-                        !(vote.voter_id == request.voter_id && vote.target_player_id == request.target_player_id)
-                    );
-                    
-                    game.partial_votes.push(PartialAnswerVote {
-                        voter_id: request.voter_id.clone(),
-                        target_player_id: request.target_player_id.clone(),
-                    });
-                    
-                    let _ = game.tx.send(GameMessage::PartialVoteSubmitted {
-                        voter_id: request.voter_id,
-                        target_player_id: request.target_player_id,
-                    });
-                    
-                    check_and_process_voting_completion(&mut game);
-                    
-                    Ok(StatusCode::OK)
-                }
-                _ => Err(StatusCode::BAD_REQUEST),
-            }
-        }
-        None => Err(StatusCode::NOT_FOUND),
-    }
-}
-
-async fn skip_voting(
-    State(app_state): State<SharedAppState>,
-    Json(request): Json<SkipVotingRequest>,
-) -> Result<StatusCode, StatusCode> {
-    let game_data_arc = match app_state.lock().unwrap().rooms.get(&request.room_name).cloned() {
-        Some(arc) => arc,
-        None => return Err(StatusCode::NOT_FOUND),
-    };
-
-    let mut game = game_data_arc.lock().unwrap();
-
-    match game.state {
-        GameState::ShowingResults { .. } => {
-            if let Some(player) = game.players.get_mut(&request.player_id) {
-                player.has_skipped_voting = true;
-
-                let _ = game.tx.send(GameMessage::PlayerSkippedVoting { player_id: request.player_id.clone() });
-
-                check_and_process_voting_completion(&mut game);
-                Ok(StatusCode::OK)
-            } else {
-                Err(StatusCode::NOT_FOUND) 
-            }
-        }
-        _ => Err(StatusCode::BAD_REQUEST), 
-    }
-}
-
 async fn create_room(
     State(app_state): State<SharedAppState>,
     Json(request): Json<CreateRoomRequest>,
@@ -759,7 +571,6 @@ async fn create_room(
         current_answer: None,
         ready_for_next: false,
         is_ready_to_start: false,
-        has_skipped_voting: false,
     };
     
     let mut players = HashMap::new();
@@ -769,7 +580,6 @@ async fn create_room(
         players,
         state: GameState::WaitingForPlayers,
         questions: Vec::new(),
-        partial_votes: Vec::new(),
         current_results: Vec::new(),
         tx,
     };
@@ -809,7 +619,22 @@ async fn join_room(
             let mut game = game_data.lock().unwrap();
 
             match game.state {
-                GameState::WaitingForPlayers => {
+                GameState::WaitingForPlayers | GameState::Ended => {
+                    // If game has ended, reset it to waiting for players
+                    if game.state == GameState::Ended {
+                        game.state = GameState::WaitingForPlayers;
+                        game.questions.clear();
+                        game.current_results.clear();
+                        // Reset all players' scores and states
+                        for player in game.players.values_mut() {
+                            player.score = 0;
+                            player.current_answer = None;
+                            player.ready_for_next = false;
+                            player.is_ready_to_start = false;
+                        }
+                        info!("Room {} reset for new game as player {} joined.", request.room_name, request.player_name);
+                    }
+
                     let mut existing_player_id_to_remove: Option<String> = None;
                     for p in game.players.values() {
                         if p.name == request.player_name {
@@ -833,7 +658,6 @@ async fn join_room(
                         current_answer: None,
                         ready_for_next: false,
                         is_ready_to_start: false, 
-                        has_skipped_voting: false,
                     };
 
                     game.players.insert(player.id.clone(), player.clone());
@@ -848,7 +672,7 @@ async fn join_room(
                     }))
                 }
                 _ => {
-                    info!("Player {} attempted to join room {} which is not in WaitingForPlayers state.", request.player_name, request.room_name);
+                    info!("Player {} attempted to join room {} which is in progress.", request.player_name, request.room_name);
                     Err(StatusCode::BAD_REQUEST) 
                 }
             }
@@ -915,8 +739,6 @@ async fn main() {
         .route("/api/submit-answer", axum::routing::post(submit_answer))
         .route("/api/ready-next", axum::routing::post(ready_for_next))
         .route("/api/generate-trivia", axum::routing::get(generate_trivia))
-        .route("/api/vote-partial-answer", axum::routing::post(vote_partial_answer))
-        .route("/api/skip-voting", axum::routing::post(skip_voting))
         .route("/ws", axum::routing::get(websocket_handler))
         .route("/api/room/:room_name/players", axum::routing::get(get_players_in_room))
         .layer(tower_http::cors::CorsLayer::permissive())
