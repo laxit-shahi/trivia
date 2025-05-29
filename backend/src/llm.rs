@@ -2,6 +2,8 @@ use reqwest::Client;
 use serde_json::json;
 use serde::{Deserialize, Serialize};
 use std::env;
+use std::fs;
+use std::path::Path;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Question {
@@ -16,14 +18,51 @@ pub enum AnswerCorrectness {
     Wrong,
 }
 
+#[derive(Debug, Serialize, Deserialize)]
+struct LoggedQuestion {
+    question: String,
+    answer: String,
+    category: String,
+    timestamp: String,
+    room_name: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+struct QuestionsLog {
+    questions: Vec<LoggedQuestion>,
+}
+
 fn get_api_token() -> Result<String, Box<dyn std::error::Error>> {
     env::var("SHOPIFY_API_TOKEN")
         .map_err(|_| "SHOPIFY_API_TOKEN environment variable not set".into())
 }
 
+fn read_existing_questions() -> Vec<String> {
+    let questions_file = "questions.json";
+    
+    if !Path::new(questions_file).exists() {
+        return Vec::new();
+    }
+    
+    match fs::read_to_string(questions_file) {
+        Ok(content) => {
+            match serde_json::from_str::<QuestionsLog>(&content) {
+                Ok(log) => {
+                    log.questions.into_iter().map(|q| q.question).collect()
+                }
+                Err(_) => Vec::new(),
+            }
+        }
+        Err(_) => Vec::new(),
+    }
+}
+
 pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
     let api_token = get_api_token()?;
+    
+    // Read existing questions to avoid duplicates
+    let existing_questions = read_existing_questions();
     
     let instructions = "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.";
     let category = "General";
@@ -32,9 +71,23 @@ pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::E
     let age_group = "22-50";
     let hint_level = "0";
     
+    // Build the exclusion part of the prompt
+    let exclusion_text = if existing_questions.is_empty() {
+        String::new()
+    } else {
+        format!(
+            "\n\nIMPORTANT: DO NOT use any of these previously used questions or create variations of them:\n{}\n\nMake sure your new questions are completely different and original.",
+            existing_questions.iter()
+                .enumerate()
+                .map(|(i, q)| format!("{}. {}", i + 1, q))
+                .collect::<Vec<_>>()
+                .join("\n")
+        )
+    };
+    
     let trivia_prompt = format!(
-        "Create a set of trivia questions. Each of the questions should be of a difficult out of ten, in the sense that in a random sample of 10 people, 3 of the people in the room should know the answer. Hint level should be out of 10. O being not hint and 10 being a super big hint. Give me the answer below the hint line. I will give you further detail on specfic details below. Category: {}, Number of questions: {}, Difficulty: {} , Age Group: {}, hints: {} --- Format: {{\"questions\":[{{\"question\":\"The text for question one\", \"answer\": \"Answer to question\", \"hint\":\"Hint to corresponding question\"}}, {{\"question\":\"...\"}}, {{\"question\":\"...\"}}]}}. No spacing between, just normal json format so i can run json.parse() on it.",
-        category, num_of_questions, difficulty, age_group, hint_level
+        "Create a set of trivia questions. Each of the questions should be of a difficult out of ten, in the sense that in a random sample of 10 people, 3 of the people in the room should know the answer. Hint level should be out of 10. O being not hint and 10 being a super big hint. Give me the answer below the hint line. I will give you further detail on specfic details below. Category: {}, Number of questions: {}, Difficulty: {} , Age Group: {}, hints: {}{} --- Format: {{\"questions\":[{{\"question\":\"The text for question one\", \"answer\": \"Answer to question\", \"hint\":\"Hint to corresponding question\"}}, {{\"question\":\"...\"}}, {{\"question\":\"...\"}}]}}. No spacing between, just normal json format so i can run json.parse() on it.",
+        category, num_of_questions, difficulty, age_group, hint_level, exclusion_text
     );
     
     let payload = json!({

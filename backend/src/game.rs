@@ -1,11 +1,13 @@
 use crate::types::*;
 use crate::utils::{create_questions, parse_generated_questions};
 use crate::llm;
+use crate::log_questions_to_file;
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 use tokio::sync::broadcast;
 use tracing::info;
 use uuid::Uuid;
+use crate::{Player, GameState, GameData, GameMessage, Question, PlayerResult, CreateRoomResponse, JoinRoomResponse};
 
 pub async fn handle_player_ready_to_start(
     game_data_arc: Arc<Mutex<GameData>>, 
@@ -92,7 +94,11 @@ async fn start_game_sequence(game_data_arc: Arc<Mutex<GameData>>, room_name: &st
         let mut game = game_data_arc.lock().unwrap();
         if game.state == GameState::WaitingForPlayers { 
             game.state = GameState::InProgress { current_question: 0 };
-            game.questions = questions_to_use;
+            game.questions = questions_to_use.clone();
+            
+            // Log questions to file
+            log_questions_to_file(&questions_to_use, "General", room_name);
+            
             let total_questions = game.questions.len() as u32;
             info!("Game starting in room {} with {} players, using {} questions.", 
                    room_name, game.players.len(), total_questions);
