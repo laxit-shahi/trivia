@@ -1,6 +1,7 @@
 use reqwest::Client;
 use serde_json::json;
 use serde::{Deserialize, Serialize};
+use std::env;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Question {
@@ -15,8 +16,14 @@ pub enum AnswerCorrectness {
     Wrong,
 }
 
+fn get_api_token() -> Result<String, Box<dyn std::error::Error>> {
+    env::var("SHOPIFY_API_TOKEN")
+        .map_err(|_| "SHOPIFY_API_TOKEN environment variable not set".into())
+}
+
 pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
+    let api_token = get_api_token()?;
     
     let instructions = "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.";
     let category = "General";
@@ -38,7 +45,7 @@ pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::E
     
     let response = client
         .post("https://proxy.shopify.ai/v1/responses")
-        .header("Authorization", "Bearer shopify-eyJpZCI6IjVhYjEwMzdiZjE2ODc1NjcyMTc4ZjJhYWY5ZGI2M2FhIiwibW9kZSI6InBlcnNvbmFsIiwiZW1haWwiOiJsYXhpdC5zaGFoaUBzaG9waWZ5LmNvbSIsImV4cGlyeSI6MTc0ODUzNDU2OX0=-P6eMEFXNtyZ6JG88tDj+YREe2FjkbGzFvzX5QxSriQE=")
+        .header("Authorization", format!("Bearer {}", api_token))
         .header("Content-Type", "application/json")
         .json(&payload)
         .send()
@@ -71,6 +78,7 @@ pub async fn check_answer_correctness(
     player_answer: &str,
 ) -> Result<AnswerCorrectness, Box<dyn std::error::Error>> {
     let client = Client::new();
+    let api_token = get_api_token()?;
     
     let prompt = format!(
         "You are an expert trivia judge. Evaluate if a player's answer is correct, partially correct, or wrong.\n\nQuestion: {}\nCorrect Answer: {}\nPlayer Answer: {}\n\nReturn ONLY one word: 'CORRECT' if the answer is exactly right or equivalent, 'PARTIAL' if it's close but missing something important, or 'WRONG' if it's completely incorrect.\n\nConsider synonyms, alternate spellings, and reasonable interpretations as correct. Consider answers that capture the main idea but lack precision as partial.",
@@ -85,7 +93,7 @@ pub async fn check_answer_correctness(
     
     let response = client
         .post("https://proxy.shopify.ai/v1/responses")
-        .header("Authorization", "Bearer shopify-eyJpZCI6IjVhYjEwMzdiZjE2ODc1NjcyMTc4ZjJhYWY5ZGI2M2FhIiwibW9kZSI6InBlcnNvbmFsIiwiZW1haWwiOiJsYXhpdC5zaGFoaUBzaG9waWZ5LmNvbSIsImV4cGlyeSI6MTc0ODUzNDU2OX0=-P6eMEFXNtyZ6JG88tDj+YREe2FjkbGzFvzX5QxSriQE=")
+        .header("Authorization", format!("Bearer {}", api_token))
         .header("Content-Type", "application/json")
         .json(&payload)
         .send()

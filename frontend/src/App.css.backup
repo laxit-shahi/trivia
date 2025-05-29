@@ -1731,6 +1731,15 @@ h3 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
+.game-room-container {
+  position: relative; /* For positioning the back button if needed, or just general container */
+  width: 100%;
+  display: flex; /* Overriding .App's flex settings for this specific container if needed */
+  flex-direction: column; /* Stack back button and screen content */
+  align-items: center;
+  justify-content: center;
+}
+
 .back-to-home-button {
   position: absolute; /* Position it relative to game-room-container or .App if not nested */
   top: 30px; /* Adjust as needed from top of .App or .game-room-container */
@@ -1754,6 +1763,12 @@ h3 {
   border-color: #5568c3;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transform: translateY(-1px);
+}
+
+/* Ensure the main .screen still centers below the button if .game-room-container is used */
+.game-room-container .screen {
+  margin-top: 60px; /* Adjust this if the button takes up more space or based on its final position */
+  /* The rest of .screen styles will apply */
 }
 
 .final-scores-screen {
