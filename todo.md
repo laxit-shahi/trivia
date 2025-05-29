@@ -1,0 +1,30 @@
+- [x] Open a port to an llm for each session that allows you to check the answers of all players.
+    - [x] The check should mark the answers that are excat as correct, partially as yellow, and completely wrong as wrong.
+- [x] Add a feature that allows players to all type in the category they want
+    - [x] If there is a majority, then that will be the category that is chosen, else it will be a random picked from the pool
+    - [x] If randomly picked add an animation taht shows the selection process visually
+    - [x] When selected, it should show the chosen category before we starting. You should be able to tweak the difficulty (1 through 10), num_of_questions (1-100),age_group (min to max range), hint_level (0-10)
+- [x] When you first hit the home page, make it such that there are two options: join and create.
+    - [x] Create will create a room, where you can then share a link (url/L-BOW)
+    - [x] Join will ask for a room name, and join that room if it exists
+    - [x] Room name is auto generated
+    - [x] each room is accessed by going to the /roomname (when you join/create this is the case in both cases)
+- [x] Add a feature that allows the host(first person to join the room) to select settings for all areas (difficult, age range...) EXCEPT category, as, remember, this is selected by everyone in the room
+- [x] Add a feature that allows players to see the answer after each question has been submitted
+    - [x] The players should be able to VOTE for answers that are partially correct.
+- [x] At end, first, second, and third place should get a custom victory screen
+    - [x] This screen should give a downloadable svg that is like a victory badge/animation.
+
+## User Experience Improvements
+- [x] Persistent Player Name System
+    - [x] Ask for player name only on first site visit
+    - [x] Store player name in localStorage for future visits
+    - [x] Auto-populate name from localStorage on subsequent visits
+    - [x] Add option to change/clear stored name
+- [x] Streamlined Room Creation Flow
+    - [x] Use stored player name when creating room (no name prompt)
+    - [x] Immediately show host settings after room creation
+    - [x] Host can configure all game settings before starting
+- [x] Enhanced Room Joining Flow
+    - [x] Use stored player name when joining room (no name prompt)
+    - [x] Direct transition to waiting room with settings visible to host

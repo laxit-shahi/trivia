@@ -1,13 +1,21 @@
 use reqwest::Client;
 use serde_json::json;
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum AnswerCorrectness {
+    Correct,
+    Partial, 
+    Wrong,
+}
 
 pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
     
     let instructions = "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.";
     let category = "General";
-    let difficulty = 10;
-    let num_of_questions = 10;
+    let difficulty = 5;
+    let num_of_questions = 2;
     let age_group = "22-50";
     let hint_level = "0";
     
@@ -51,9 +59,68 @@ pub async fn generate_trivia_questions() -> Result<String, Box<dyn std::error::E
     Err("Could not extract text from response".into())
 }
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let trivia_text = generate_trivia_questions().await?;
-    println!("{}", trivia_text);
-    Ok(())
+pub async fn check_answer_correctness(
+    question: &str,
+    correct_answer: &str,
+    player_answer: &str,
+) -> Result<AnswerCorrectness, Box<dyn std::error::Error>> {
+    let client = Client::new();
+    
+    let prompt = format!(
+        "You are an expert trivia judge. Evaluate if a player's answer is correct, partially correct, or wrong.\n\nQuestion: {}\nCorrect Answer: {}\nPlayer Answer: {}\n\nReturn ONLY one word: 'CORRECT' if the answer is exactly right or equivalent, 'PARTIAL' if it's close but missing something important, or 'WRONG' if it's completely incorrect.\n\nConsider synonyms, alternate spellings, and reasonable interpretations as correct. Consider answers that capture the main idea but lack precision as partial.",
+        question, correct_answer, player_answer
+    );
+    
+    let payload = json!({
+        "model": "expensive-but-best",
+        "instructions": "You are a precise trivia judge. Return only CORRECT, PARTIAL, or WRONG.",
+        "input": prompt
+    });
+    
+    let response = client
+        .post("https://proxy.shopify.ai/v1/responses")
+        .header("Authorization", "Bearer shopify-eyJpZCI6IjVhYjEwMzdiZjE2ODc1NjcyMTc4ZjJhYWY5ZGI2M2FhIiwibW9kZSI6InBlcnNvbmFsIiwiZW1haWwiOiJsYXhpdC5zaGFoaUBzaG9waWZ5LmNvbSIsImV4cGlyeSI6MTc0ODUzNDU2OX0=-P6eMEFXNtyZ6JG88tDj+YREe2FjkbGzFvzX5QxSriQE=")
+        .header("Content-Type", "application/json")
+        .json(&payload)
+        .send()
+        .await?;
+    
+    let response_json: serde_json::Value = response.json().await?;
+    
+    // Extract the text response
+    let result_text = if let Some(output) = response_json.get("output") {
+        if let Some(first_output) = output.get(0) {
+            if let Some(content) = first_output.get("content") {
+                if let Some(first_content) = content.get(0) {
+                    if let Some(text) = first_content.get("text") {
+                        text.as_str().unwrap_or("").to_uppercase().trim().to_string()
+                    } else {
+                        return Err("No text in response".into());
+                    }
+                } else {
+                    return Err("No content in response".into());
+                }
+            } else {
+                return Err("No content array in response".into());
+            }
+        } else {
+            return Err("No first output in response".into());
+        }
+    } else {
+        return Err("No output in response".into());
+    };
+    
+    match result_text.as_str() {
+        "CORRECT" => Ok(AnswerCorrectness::Correct),
+        "PARTIAL" => Ok(AnswerCorrectness::Partial),
+        "WRONG" => Ok(AnswerCorrectness::Wrong),
+        _ => {
+            // Fallback to exact match if LLM response is unclear
+            if player_answer.trim().eq_ignore_ascii_case(correct_answer.trim()) {
+                Ok(AnswerCorrectness::Correct)
+            } else {
+                Ok(AnswerCorrectness::Wrong)
+            }
+        }
+    }
 }

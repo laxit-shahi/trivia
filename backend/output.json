@@ -1,8 +1,8 @@
 {
   "background": false,
-  "created_at": 1748462206,
+  "created_at": 1748498846,
   "error": null,
-  "id": "resp_68376a7dfb0c819182f90b9e28c4720c0107bc85d7c8de69",
+  "id": "resp_6837f99e745c8198a78edee443aac29b082165babc070221",
   "incomplete_details": null,
   "instructions": "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.",
   "max_output_tokens": null,
@@ -14,11 +14,11 @@
       "content": [
         {
           "annotations": [],
-          "text": "{\"questions\":[{\"question\":\"What is the only landlocked country in Southeast Asia?\",\"answer\":\"Laos\",\"hint\":\"\"},{\"question\":\"Which famous physicist was offered the presidency of Israel in 1952 but declined?\",\"answer\":\"Albert Einstein\",\"hint\":\"\"},{\"question\":\"What is the term for a word or phrase that reads the same forwards and backwards?\",\"answer\":\"Palindrome\",\"hint\":\"\"},{\"question\":\"Which literary character's adventures begin at 221B Baker Street?\",\"answer\":\"Sherlock Holmes\",\"hint\":\"\"},{\"question\":\"In Greek mythology, who is the Queen of the Underworld?\",\"answer\":\"Persephone\",\"hint\":\"\"},{\"question\":\"What is the name of the largest moon of Saturn?\",\"answer\":\"Titan\",\"hint\":\"\"},{\"question\":\"Which element on the periodic table has the atomic number 79?\",\"answer\":\"Gold\",\"hint\":\"\"},{\"question\":\"Which artist painted 'The Starry Night'?\",\"answer\":\"Vincent van Gogh\",\"hint\":\"\"},{\"question\":\"What is the capital city of New Zealand?\",\"answer\":\"Wellington\",\"hint\":\"\"},{\"question\":\"Which planet is known for its prominent ring system?\",\"answer\":\"Saturn\",\"hint\":\"\"}]}",
+          "text": "{\"questions\":[{\"question\":\"What element, with the atomic number 79, is known for its use in jewelry and electronics?\",\"answer\":\"Gold\",\"hint\":\"\"},{\"question\":\"Which author wrote the dystopian novel 'Fahrenheit 451'?\",\"answer\":\"Ray Bradbury\",\"hint\":\"\"}]}",
           "type": "output_text"
         }
       ],
-      "id": "msg_68376a7e9cf0819188cd2654770359620107bc85d7c8de69",
+      "id": "msg_6837f99ee7b88198a0c78ab70ca0e91d082165babc070221",
       "role": "assistant",
       "status": "completed",
       "type": "message"
@@ -33,7 +33,7 @@
   "service_tier": "default",
   "status": "completed",
   "store": true,
-  "temperature": 1,
+  "temperature": 1.0,
   "text": {
     "format": {
       "type": "text"
@@ -41,18 +41,18 @@
   },
   "tool_choice": "auto",
   "tools": [],
-  "top_p": 1,
+  "top_p": 1.0,
   "truncation": "disabled",
   "usage": {
     "input_tokens": 228,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 250,
+    "output_tokens": 63,
     "output_tokens_details": {
       "reasoning_tokens": 0
     },
-    "total_tokens": 478
+    "total_tokens": 291
   },
   "user": null
 }
