@@ -544,32 +544,44 @@ function GameRoom() {
       <div className="screen final-scores-screen">
         {currentPlayerRank > 0 && currentPlayerRank <= 3 && currentPlayerDetails ? (
           <div className="victory-section">
-            <div className={`victory-banner rank-${currentPlayerRank}`}>
-              <h1 className="victory-title">
-                {currentPlayerRank === 1 && '🏆 CONGRATULATIONS! 🏆'}
-                {currentPlayerRank === 2 && '🥈 EXCELLENT WORK! 🥈'}
-                {currentPlayerRank === 3 && '🥉 GREAT JOB! 🥉'}
-              </h1>
-              <h2 className="victory-subtitle">
-                You finished in {currentPlayerRank === 1 ? '1st' : currentPlayerRank === 2 ? '2nd' : '3rd'} place!
-              </h2>
+            <div className="victory-card-3d">
+              <div className={`victory-card-face victory-card-front rank-${currentPlayerRank}`}>
+                <div className="victory-crown">
+                  {currentPlayerRank === 1 && '👑'}
+                  {currentPlayerRank === 2 && '🥈'}
+                  {currentPlayerRank === 3 && '🥉'}
+                </div>
+                
+                <div className="victory-rank-display">
+                  <div className={`victory-rank-number rank-${currentPlayerRank}`}>
+                    {currentPlayerRank === 1 ? '1ST' : currentPlayerRank === 2 ? '2ND' : '3RD'}
+                  </div>
+                  <div className="victory-title-3d">
+                    {currentPlayerRank === 1 && 'CHAMPION'}
+                    {currentPlayerRank === 2 && 'RUNNER-UP'}
+                    {currentPlayerRank === 3 && 'THIRD PLACE'}
+                  </div>
+                </div>
+                
+                <div className="victory-player-name">
+                  {currentPlayerDetails.name}
+                </div>
+                
+                <div className="victory-score-display">
+                  <div className="victory-score-label">Final Score</div>
+                  <div className={`victory-score-value rank-${currentPlayerRank}`}>
+                    {currentPlayerDetails.score}/{fixedNumQuestions * 2}
+                  </div>
+                </div>
+                
+                <button 
+                  onClick={() => downloadBadge(currentPlayerRank, currentPlayerDetails.name, currentPlayerDetails.score)}
+                  className="victory-download-btn"
+                >
+                  🏅 Download Badge
+                </button>
+              </div>
             </div>
-            
-            <div className="badge-preview">
-              <div 
-                className="svg-preview"
-                dangerouslySetInnerHTML={{ 
-                  __html: generateVictoryBadge(currentPlayerRank, currentPlayerDetails.name, currentPlayerDetails.score) 
-                }}
-              />
-            </div>
-            
-            <button 
-              onClick={() => downloadBadge(currentPlayerRank, currentPlayerDetails.name, currentPlayerDetails.score)}
-              className="download-badge-button"
-            >
-              🏅 Download Your Victory Badge
-            </button>
           </div>
         ) : (
           <div className="participation-section">
