@@ -404,6 +404,26 @@ function GameRoom() {
   const renderWaitingScreen = () => (
     <div className="screen waiting-screen">
       <h1>Trivia Lobby</h1>
+      <div className="room-name-section">
+        <h3>Room: {roomName}</h3>
+        <button 
+          onClick={() => {
+            navigator.clipboard.writeText(roomName || '');
+            // Show a brief feedback - could be improved with a toast notification
+            const btn = document.querySelector('.copy-room-button') as HTMLButtonElement;
+            if (btn) {
+              const originalText = btn.textContent;
+              btn.textContent = '✓ Copied!';
+              setTimeout(() => {
+                btn.textContent = originalText;
+              }, 1500);
+            }
+          }}
+          className="copy-room-button"
+        >
+          📋 Copy Room Name
+        </button>
+      </div>
       <h2>Players Joined:</h2>
       <div className="players-list">
         {players.map(player => (
