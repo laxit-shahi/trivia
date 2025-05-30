@@ -1,10 +1,3 @@
-use axum::{
-    extract::{ws::WebSocket, ws::WebSocketUpgrade, State},
-    http::StatusCode,
-    response::Response,
-    Json,
-};
-use futures::{sink::SinkExt, stream::StreamExt};
 use serde::{Deserialize, Serialize};
 use std::{
     collections::HashMap,
@@ -12,11 +5,7 @@ use std::{
     fs,
     path::Path,
 };
-use tokio::sync::broadcast;
 use tracing::info;
-use uuid::Uuid;
-use rand;
-use rand::seq::SliceRandom;
 use chrono::{DateTime, Utc};
 use serde_json;
 
@@ -107,7 +96,10 @@ async fn main() {
         .route("/api/player-ready-to-start", axum::routing::post(handlers::player_ready_to_start))
         .route("/api/submit-answer", axum::routing::post(handlers::submit_answer))
         .route("/api/ready-next", axum::routing::post(handlers::ready_for_next))
+        .route("/api/adjust-score", axum::routing::post(handlers::adjust_score))
+        .route("/api/return-to-lobby", axum::routing::post(handlers::return_to_lobby))
         .route("/api/generate-trivia", axum::routing::get(handlers::generate_trivia))
+        .route("/api/trivia-settings", axum::routing::get(handlers::get_trivia_settings))
         .route("/ws", axum::routing::get(websocket::websocket_handler))
         .route("/api/room/:room_name/players", axum::routing::get(handlers::get_players_in_room))
         .layer(tower_http::cors::CorsLayer::permissive())

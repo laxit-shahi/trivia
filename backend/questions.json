@@ -1,74 +1,3784 @@
 {
   "questions": [
     {
-      "question": "Which ancient civilization is credited with creating the first form of writing known as cuneiform?",
-      "answer": "Sumerians",
+      "question": "What is the capital of France?",
+      "answer": "Paris",
       "category": "General",
-      "timestamp": "2025-05-29T19:08:57.185549Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "What is the chemical symbol for the element with the atomic number 82, also known for its historical usage in plumbing and potential health risks?",
-      "answer": "Pb (Lead)",
+      "question": "What is 2 + 2?",
+      "answer": "4",
       "category": "General",
-      "timestamp": "2025-05-29T19:08:57.185549Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "Which ancient civilization is credited with creating the first form of writing known as cuneiform?",
-      "answer": "Sumerians",
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
       "category": "General",
-      "timestamp": "2025-05-29T19:09:39.346345Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "What is the chemical symbol for the element with the atomic number 82, also known for its historical usage in plumbing and potential health risks?",
-      "answer": "Pb (Lead)",
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
       "category": "General",
-      "timestamp": "2025-05-29T19:09:39.346345Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "Which ancient city was known as Byzantium before it was renamed?",
-      "answer": "Constantinople",
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
       "category": "General",
-      "timestamp": "2025-05-29T19:10:12.109722Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "Who was the first woman to win a Nobel Prize and is known for her research on radioactivity?",
-      "answer": "Marie Curie",
+      "question": "In which year did World War II end?",
+      "answer": "1945",
       "category": "General",
-      "timestamp": "2025-05-29T19:10:12.109722Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "In which year was the first iPhone released?",
-      "answer": "2007",
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
       "category": "General",
-      "timestamp": "2025-05-29T19:13:26.261976Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
     },
     {
-      "question": "What is the national animal of Scotland?",
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-29T20:03:23.456136Z",
+      "room_name": "CalmHawk"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-29T20:04:58.175197Z",
+      "room_name": "WildEagle"
+    },
+    {
+      "question": "What is the main ingredient in traditional Japanese miso soup?",
+      "answer": "Fermented soybean paste",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "Which fruit is known as the 'King of Fruits' in Southeast Asia?",
+      "answer": "Durian",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "What is the name of the process where beer is conditioned in cool temperatures?",
+      "answer": "Lagering",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "Which Italian cheese is made from buffalo milk?",
+      "answer": "Mozzarella",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "What is the primary alcohol in a traditional Margarita cocktail?",
+      "answer": "Tequila",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "Which South American country's cuisine includes the dish 'ceviche'?",
+      "answer": "Peru",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "What is the key ingredient in the Indian dish 'paneer tikka'?",
+      "answer": "Paneer (Indian cottage cheese)",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "What type of pastry is used to make a classic French éclair?",
+      "answer": "Choux pastry",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "In what type of Japanese establishment would you typically find 'omakase'?",
+      "answer": "Sushi restaurant",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "Which type of tea undergoes the most oxidation?",
+      "answer": "Black tea",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:24.042136Z",
+      "room_name": "WildJaguar"
+    },
+    {
+      "question": "Which spice is commonly used in Indian cooking and also serves as a natural dye, turning foods a golden hue?",
+      "answer": "Turmeric",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "What type of pasta shares its name with an Italian word meaning 'butterflies'?",
+      "answer": "Farfalle",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "Which fruit is unique because its seeds are on the outside rather than the inside?",
+      "answer": "Strawberry",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "What expensive culinary delicacy is harvested from the roe of sturgeon fish?",
+      "answer": "Caviar",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "Which strong-smelling fermented Korean side dish made from vegetables and spices is gaining popularity worldwide?",
+      "answer": "Kimchi",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "What is the Italian term for ice cream that contains less air and more flavor, making it denser than traditional ice cream?",
+      "answer": "Gelato",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "Which popular Southeast Asian sauce is made from chilies and vinegar, often used to add heat to dishes?",
+      "answer": "Sriracha",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "In Japan, which dish consists of thinly sliced raw fish served without rice, differing from sushi?",
+      "answer": "Sashimi",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "What term describes the initial phase in bread-making where water and flour are mixed together before other ingredients are added?",
+      "answer": "Autolyse",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "Which French term refers to a dish that has been reduced by boiling to concentrate the flavor, often used for sauces?",
+      "answer": "Reduction",
+      "category": "General",
+      "timestamp": "2025-05-29T20:10:49.269750Z",
+      "room_name": "SmartTiger"
+    },
+    {
+      "question": "What futuristic transportation concept announced in the 2010s involves passenger pods traveling in tubes at high speeds?",
+      "answer": "Hyperloop",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which 21st century pandemic was declared a Public Health Emergency of International Concern by the WHO in July 2019?",
+      "answer": "COVID-19",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What streaming service, launched in 2008, revolutionized the way we consume TV and movies online?",
+      "answer": "Netflix",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which social media platform, founded in 2004, became the largest by 2011 with over 750 million users?",
+      "answer": "Facebook",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What cryptocurrency, created in 2009 by an anonymous person(s) under the pseudonym Satoshi Nakamoto, became the world's first decentralized digital currency?",
+      "answer": "Bitcoin",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which spacecraft, launched in 2004, successfully landed on a comet in 2014?",
+      "answer": "Rosetta",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What popular music festival, originating in California, became known for its celebrity attendees and fashion?",
+      "answer": "Coachella",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which global agreement, adopted in 2015, aimed to mitigate climate change by keeping global temperature rise below 2 degrees Celsius?",
+      "answer": "Paris Agreement",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What famous space telescope was launched in 2021 to study the universe's first galaxies and stars?",
+      "answer": "James Webb Space Telescope",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which fictional character became iconic for blurring reality and fiction in Christopher Nolan's 2010 film about dream infiltration?",
+      "answer": "Dom Cobb from 'Inception'",
+      "category": "General",
+      "timestamp": "2025-05-29T20:24:44.311843Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which ancient mathematician is famous for his theorem on right-angled triangles?",
+      "answer": "Pythagoras",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "answer": "Diamond",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Which molecule is known as the genetic blueprint of life?",
+      "answer": "DNA",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "What is the main language spoken in Brazil?",
+      "answer": "Portuguese",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Who was the first human to journey into outer space?",
+      "answer": "Yuri Gagarin",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "What famous architect designed the Guggenheim Museum in New York City?",
+      "answer": "Frank Lloyd Wright",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "What element does 'Na' represent on the periodic table?",
+      "answer": "Sodium",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Which U.S. state is known as the 'Sunshine State'?",
+      "answer": "Florida",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Who wrote the famous play 'Hamlet'?",
+      "answer": "William Shakespeare",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Which planet is known as the 'Red Planet'?",
+      "answer": "Mars",
+      "category": "General",
+      "timestamp": "2025-05-29T20:39:38.691365Z",
+      "room_name": "SmartPanther"
+    },
+    {
+      "question": "Which city hosts the annual Running of the Bulls?",
+      "answer": "Pamplona",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What is the name of the longest bone in the human body?",
+      "answer": "Femur",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which bird is known for its ability to mimic human speech?",
+      "answer": "Parrot",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What is the main ingredient in guacamole?",
+      "answer": "Avocado",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What is the term for a baby whale?",
+      "answer": "Calf",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which U.S. state is known for its potatoes?",
+      "answer": "Idaho",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What element is represented by the symbol 'Fe'?",
+      "answer": "Iron",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which planet is closest to the Sun?",
+      "answer": "Mercury",
+      "category": "General",
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What mythical creature is Scotland's national animal?",
       "answer": "Unicorn",
       "category": "General",
-      "timestamp": "2025-05-29T19:13:26.261976Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
     },
     {
-      "question": "What is the only type of rock that can float on water?",
-      "answer": "Pumice",
+      "question": "In which ocean is the Bermuda Triangle located?",
+      "answer": "Atlantic Ocean",
       "category": "General",
-      "timestamp": "2025-05-29T19:14:23.631847Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:54:09.440754Z",
+      "room_name": "SmartOrca"
     },
     {
-      "question": "Which mammal is known to have the longest gestation period?",
-      "answer": "African Elephant",
+      "question": "What ancient empire was ruled by a group of fierce warrior women, often linked to the Greek goddess Artemis?",
+      "answer": "The Amazons",
       "category": "General",
-      "timestamp": "2025-05-29T19:14:23.631847Z",
-      "room_name": "CoolJaguar"
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "Which elusive mathematical concept, proposed by Pierre de Fermat, remained unsolved for over 350 years before being proven in 1994?",
+      "answer": "Fermat's Last Theorem",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What rare astronomical event happens when a planet passes directly between the Earth and the Sun, resulting in a visible dark spot?",
+      "answer": "Transit",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "Which mysterious manuscript, written in an unknown script since the 15th century, has puzzled cryptographers and linguists alike?",
+      "answer": "The Voynich Manuscript",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What enigmatic historical figure, known for his coded diaries, theorized about the existence of alien life in the late 16th century England?",
+      "answer": "John Dee",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What elusive type of particle, predicted by physicists but never directly observed, is thought to make up dark matter?",
+      "answer": "WIMP (Weakly Interacting Massive Particle)",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What ancient city, located in modern-day Turkey, is believed to be the site of the mythological Trojan War?",
+      "answer": "Troy",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "Which hidden architectural feature, found in certain Gothic cathedrals, produces haunting acoustical effects and is often linked to the divine?",
+      "answer": "Whispering Gallery",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What cryptic artifact, with a mix of Egyptian hieroglyphs, Greek, and Demotic scripts, was crucial in deciphering ancient Egyptian writing?",
+      "answer": "Rosetta Stone",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What obscure art movement of the early 20th century was characterized by a fascination with industrialization and the contemporary cityscape?",
+      "answer": "Futurism",
+      "category": "General",
+      "timestamp": "2025-05-29T20:59:03.106332Z",
+      "room_name": "FastShark"
+    },
+    {
+      "question": "What mathematical problem, first posed by a German mathematician in 1859, concerns the distribution of prime numbers and remains one of the most famous unsolved questions?",
+      "answer": "Riemann Hypothesis",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which ancient civilization, known for its undeciphered script called Linear A, was centered on the island of Crete?",
+      "answer": "Minoan",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What is the name of the rare natural phenomenon where the moon entirely covers the sun, visible only from a small path on Earth?",
+      "answer": "Total Solar Eclipse",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which elusive prehistoric fish, thought to be extinct, was discovered alive in 1938 off the coast of South Africa?",
+      "answer": "Coelacanth",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What term describes a hypothetical faster-than-light propulsion system allowing spacecraft to travel vast distances in an instant, often seen in science fiction?",
+      "answer": "Warp Drive",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which enigmatic region on the Moon, known for its dark plains and maria, was named after the mythological sea?",
+      "answer": "Mare Imbrium",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What geological event involves the movement of tectonic plates causing a sudden release of energy, commonly resulting in an earthquake?",
+      "answer": "Fault Slip",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which elusive underwater phenomenon, often appearing as a glowing, milky sea, remains largely unexplained even today?",
+      "answer": "Bioluminescent Bay",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "Which obscure theory in physics, suggesting the existence of multiple universes, challenges the traditional understanding of cosmic reality?",
+      "answer": "Multiverse Theory",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What is the name of the famous unsolved problem in computer science regarding the relationship between P-class and NP-class problems?",
+      "answer": "P vs NP Problem",
+      "category": "General",
+      "timestamp": "2025-05-29T21:02:26.233860Z",
+      "room_name": "SmartOrca"
+    },
+    {
+      "question": "What rare mineral, discovered in 1789, shares its name with a village in Sweden but is found in very few other places on Earth?",
+      "answer": "Yttrium",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which Italian mathematician's sequence is known for its connection to the golden ratio and begins with 0, 1, 1, 2, 3, 5, 8...?",
+      "answer": "Fibonacci sequence",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What is the only letter in the English language that does not appear in the name of any U.S. state?",
+      "answer": "Q",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which ancient civilization is credited with the invention of the wheel, dating back to 3500 BCE?",
+      "answer": "Sumerians",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What is the name of the massive rotating storm on Jupiter famously observed by the Voyager spacecraft?",
+      "answer": "The Great Red Spot",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which novel, published in 1969, is set during World War II and is known for its non-linear narrative and satirical tone?",
+      "answer": "Catch-22",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What unique discovery was made by Marie Curie leading to her winning Nobel Prizes in two different scientific fields?",
+      "answer": "Radioactivity",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which astronomical object is defined as a small, icy body from the Kuiper Belt that brightens upon approaching the Sun?",
+      "answer": "Comet",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What elusive number, known as Euler's number, is represented by the letter 'e' and is approximately equal to 2.718?",
+      "answer": "Euler's number (e)",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which once-lost Da Vinci painting became the most expensive artwork ever sold at auction in 2017?",
+      "answer": "Salvator Mundi",
+      "category": "General",
+      "timestamp": "2025-05-29T21:10:33.580342Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which obscure kingdom existed in Southeast Asia around the 14th century and is known for its impressive temples now located in modern-day Myanmar?",
+      "answer": "The Kingdom of Bagan",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "Which lesser-known Norse goddess is associated with healing and medical skill, often depicted alongside her father, the god of medicine?",
+      "answer": "Eir",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "What unique astronomical phenomenon, named after a famous comet discoverer, occurs every 76 years and is one of the most observed?",
+      "answer": "Halley's Comet",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "Which cryptic writing system was used by an ancient civilization in modern-day Iran and remains undeciphered to this day?",
+      "answer": "Elamite",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "Which elusive concept in quantum mechanics suggests that particles can be in multiple states at once until observed?",
+      "answer": "Superposition",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "What distant, ice-capped moon of Jupiter is believed to have a subsurface ocean, prompting speculation about extraterrestrial life?",
+      "answer": "Europa",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "Which ancient Mesopotamian ziggurat, partially restored, is often linked to the biblical Tower of Babel?",
+      "answer": "Etemenanki",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "What obscure phobia involves an intense fear of large, open spaces, rendering normal outdoor activities daunting?",
+      "answer": "Agoraphobia",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "Which enigmatic mineral, known for its extreme hardness and dark appearance, is primarily composed of carbon?",
+      "answer": "Lonsdaleite",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "What unique style of Japanese poetry, traditionally consisting of three lines and a 5-7-5 syllable structure, captures fleeting moments in nature?",
+      "answer": "Haiku",
+      "category": "General",
+      "timestamp": "2025-05-29T21:12:03.248866Z",
+      "room_name": "CleverPanther"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-30T16:49:06.893883Z",
+      "room_name": "WisePanther"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-30T16:50:21.394388Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-30T16:51:46.008158Z",
+      "room_name": "QuickLion"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-05-30T16:57:27.057248Z",
+      "room_name": "EpicDolphin"
+    },
+    {
+      "question": "What rare, deep-sea fish known as a 'living fossil' was discovered off the coast of South Africa in 1938?",
+      "answer": "Coelacanth",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which obscure rock formation in Australia is known for its unusual wave shape and vibrant colors?",
+      "answer": "Wave Rock",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What unique type of star is characterized by its rapid rotation and strong magnetic field?",
+      "answer": "Pulsar",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the name of the elusive, giant squid-like creature that has been depicted in various mythologies and was first captured on film in 2004?",
+      "answer": "Kraken",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which secretive society, known for its religious and scientific influence, was founded in 1660?",
+      "answer": "Royal Society",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the technical term for the fear of the number 13?",
+      "answer": "Triskaidekaphobia",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which ancient library, once located in the Middle East, was one of the largest and most significant libraries of the ancient world?",
+      "answer": "Library of Alexandria",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What rare celestial event involves five or more planets appearing in alignment in the sky?",
+      "answer": "Planetary Alignment",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which elusive South American bird is famous for its elaborate courtship rituals and unique glossy-black plumage?",
+      "answer": "Rufous-crested Coquette",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What rare type of crystal, found naturally in only a few places, refracts light into the colors of the spectrum, resembling a rainbow?",
+      "answer": "Iridescent silica",
+      "category": "General",
+      "timestamp": "2025-05-30T17:09:32.127167Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the name of the artist known for creating a series of paintings titled 'Black Square'?",
+      "answer": "Kazimir Malevich",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which ancient artifact, discovered in 1799, provided the key to understanding Egyptian hieroglyphs?",
+      "answer": "Rosetta Stone",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the name of the deepest point in Earth's oceans?",
+      "answer": "Challenger Deep",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which obscure chemical element is represented by the symbol 'Es' and named after a famous physicist?",
+      "answer": "Einsteinium",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What cryptic historical event involved a failed attempt to assassinate a king by blowing up the House of Lords in 1605?",
+      "answer": "The Gunpowder Plot",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which rare astronomical event, named after the Greek god of chaos, occurred in 2018 and won't happen again until 2033?",
+      "answer": "Aphelion of Ceres",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the only known predator of the great white shark, besides humans?",
+      "answer": "Orca (Killer Whale)",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which cryptic word refers to an ancient Slavic god of fortune and wealth, worshipped by early Eastern Slavs?",
+      "answer": "Dazhbog",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the name of the elusive 1920's art movement that emphasized speed, technology, and modernization?",
+      "answer": "Futurism",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which elusive and complex mathematical conjecture, proposed by Pierre de Fermat in 1637, was unsolved until 1994?",
+      "answer": "Fermat's Last Theorem",
+      "category": "General",
+      "timestamp": "2025-05-30T17:11:33.690895Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which obscure element, discovered in 1886, is named after the scientist who accidentally inhaled its poison gas form and survived?",
+      "answer": "Fluorine",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What rare astronomical term describes the point in an orbit closest to the Sun?",
+      "answer": "Perihelion",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "Which unique, spirally-patterned gastropod is known for being one of the slowest-moving creatures in the animal kingdom?",
+      "answer": "Banana Slug",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What distant cosmic structure, characterized by its massive gravitational pull, is known for bending light around it?",
+      "answer": "Gravitational Lens",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "Which avant-garde art style, beginning in the early 1900s, was known for its radical destructiveness and anti-art stance?",
+      "answer": "Dadaism",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What rare instrument, similar to a zither but with a keyboard, originated in Hungary and is distinguished by its vibrant sound?",
+      "answer": "Cimbalom",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "Which ancient writing system, composed of wedge-shaped marks, was used in Mesopotamia?",
+      "answer": "Cuneiform",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What unique linguistic phenomenon occurs when a new word is created from adapting words of another language?",
+      "answer": "Loanblend",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "Which secluded South American site, built by the Incas, is famous for its intricate stone architecture and can be found atop a mountain ridge?",
+      "answer": "Machu Picchu",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What historical mercantile association, formed in Northern Europe, played a crucial role in the history of trade in the 13th century?",
+      "answer": "Hanseatic League",
+      "category": "General",
+      "timestamp": "2025-05-30T17:16:59.974349Z",
+      "room_name": "WiseOrca"
+    },
+    {
+      "question": "What is the name of the only known moon orbiting the dwarf planet Haumea in the Kuiper Belt?",
+      "answer": "Namaka",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "Which rare metal, known for being highly corrosion-resistant, is also used in pacemakers and certain spacecraft?",
+      "answer": "Tantalum",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What phenomenon involves the sudden illumination caused by a meteoroid engulfing into Earth's atmosphere, known as a 'shooting star'?",
+      "answer": "Meteor",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What obscure mechanical process uses liquid at high pressure to power various applications like hydraulic lifts?",
+      "answer": "Hydraulics",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What rare amphibian, known for never undergoing full metamorphosis, retains larval features into adulthood?",
+      "answer": "Axolotl",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "Which ancient civilization is credited with the initial concept and creation of an encyclopedia in 300 BC?",
+      "answer": "Roman Empire",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What elusive climatic occurrence involves the sudden warming of air in the stratosphere over the polar region, affecting weather patterns?",
+      "answer": "Sudden Stratospheric Warming",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What term refers to the hypothesized point in time at which technological growth becomes uncontrollably rapid, resulting in unforeseeable changes to human civilization?",
+      "answer": "Technological Singularity",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "Which rare geological feature, formed by volcanic activity, consists of hexagonally-shaped basalt columns?",
+      "answer": "Giant's Causeway",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "What is the name of the minimalistic programming language developed in the 1960s, known for its simplicity and influence on many modern languages?",
+      "answer": "LISP",
+      "category": "General",
+      "timestamp": "2025-05-30T17:25:30.361631Z",
+      "room_name": "LuckyDolphin"
+    },
+    {
+      "question": "Which notoriously elusive fish, thought extinct until one was caught off South Africa in the 1930s, is known for its limb-like fins?",
+      "answer": "Coelacanth",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What is the name of the art movement founded by a group of Italian artists in the early 20th century that focused on motion, technology, and the modern city?",
+      "answer": "Futurism",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What rare astronomical event occurs when the Earth's shadow falls directly onto the Moon, creating a reddish color?",
+      "answer": "Lunar Eclipse",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "Which rare physical phenomenon occurs when light waves interweave and create a pattern of dark and light fringes?",
+      "answer": "Interference",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "Which historical mystery involves the disappearance of an entire English colony on Roanoke Island in the late 16th century?",
+      "answer": "Lost Colony of Roanoke",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What is the only egg-laying mammal known for its duck-bill and webbed feet, native to eastern Australia and Tasmania?",
+      "answer": "Platypus",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What puzzling astronomical entity, characterized by vast, dark regions, is considered the 'cold spot' in the cosmic microwave background?",
+      "answer": "CMB Cold Spot",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What technical term refers to the splitting of light into different colors as it passes through a prism?",
+      "answer": "Dispersion",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "Which defunct language, used in ancient Crete, remains untranslated to this day, and is known as Linear A?",
+      "answer": "Linear A",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What is the term for a moon of Mars, discovered in 1877, with a name meaning 'fear' in Greek?",
+      "answer": "Phobos",
+      "category": "General",
+      "timestamp": "2025-05-30T18:01:17.876624Z",
+      "room_name": "BraveFox"
+    },
+    {
+      "question": "What soft drink was originally invented as a mixer for whiskey in the 19th century?",
+      "answer": "Dr Pepper",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What classic video game was originally called 'Jumpman'?",
+      "answer": "Donkey Kong",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What movie features a character named Jack Dawson?",
+      "answer": "Titanic",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "answer": "Japan",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What is the largest internal organ in the human body?",
+      "answer": "Liver",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which band recorded the hit song 'Bohemian Rhapsody'?",
+      "answer": "Queen",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What is the only mammal capable of true flight?",
+      "answer": "Bat",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which TV show features a coffee shop called Central Perk?",
+      "answer": "Friends",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What is the rarest M&M color?",
+      "answer": "Brown",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which animal is known as the 'King of the Jungle'?",
+      "answer": "Lion",
+      "category": "General",
+      "timestamp": "2025-05-30T20:44:06.182265Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What uniquely striped animal is a member of the Equidae family and known for its ability to create confusing visual illusions for predators?",
+      "answer": "Zebra",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which historical figure is credited with unifying the Mongolian tribes and founding one of the largest empires in history in the 13th century?",
+      "answer": "Genghis Khan",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What traditional Mexican holiday occurs on November 1st and 2nd, celebrating and honoring deceased loved ones with colorful altars?",
+      "answer": "Día de los Muertos (Day of the Dead)",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which mythical Scottish creature is said to reside in Loch Ness, with reported sightings fueling debates about its existence?",
+      "answer": "Nessie (Loch Ness Monster)",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What popular board game involves players buying, trading, and selling properties to bankrupt opponents, often leading to real-life family disputes?",
+      "answer": "Monopoly",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What common kitchen herb is also known as coriander and has leaves known as cilantro in many recipes worldwide?",
+      "answer": "Coriander",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which U.S. city is famously known for its pizza style, which features deep-dish crusts and is loaded with toppings?",
+      "answer": "Chicago",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What famous annual motorcycle race takes place on the Isle of Man and is known for its challenging road circuit?",
+      "answer": "Isle of Man TT",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "Which American sport, often called \"America's pastime,\" features nine innings of play and uses a bat and ball?",
+      "answer": "Baseball",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What is the name of the tallest mountain in Africa, located in Tanzania and known for its snow-capped peak?",
+      "answer": "Mount Kilimanjaro",
+      "category": "General",
+      "timestamp": "2025-05-30T21:03:53.987582Z",
+      "room_name": "SmartFalcon"
+    },
+    {
+      "question": "What city is famously split by the Bosphorus Strait, connecting Europe and Asia?",
+      "answer": "Istanbul",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Which actor starred as the lead character in the movie 'Gladiator'?",
+      "answer": "Russell Crowe",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "What is the smallest prime number greater than 5?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Which bird is the fastest in a dive, reaching speeds over 240 mph?",
+      "answer": "Peregrine Falcon",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Who composed the classical piece 'The Four Seasons'?",
+      "answer": "Antonio Vivaldi",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "What was the first animated feature film released by Disney in 1937?",
+      "answer": "Snow White and the Seven Dwarfs",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Which element on the periodic table has the atomic number 8?",
+      "answer": "Oxygen",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "What is the square root of 144?",
+      "answer": "12",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Which country hosted the 2016 Summer Olympics?",
+      "answer": "Brazil",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "What is the largest organ in the human body by surface area?",
+      "answer": "Skin",
+      "category": "General",
+      "timestamp": "2025-05-30T21:33:48.414490Z",
+      "room_name": "HappyOrca"
+    },
+    {
+      "question": "Which iconic beverage brand features a beverage named after a citrus fruit and is known for its green bottle?",
+      "answer": "Mountain Dew",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What is the name of the amusement park ride that features a raised track and is known for its swift drops and turns?",
+      "answer": "Roller Coaster",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What famous children's toy consists of interlocking plastic bricks that can be used to construct models?",
+      "answer": "LEGO",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "Which island country in the Caribbean is known for its reggae music, jerk cuisine, and Usain Bolt?",
+      "answer": "Jamaica",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What well-known Internet meme features a shiba inu dog and uses captions in broken English?",
+      "answer": "Doge",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What popular social media app allows users to share short videos often featuring dance and music?",
+      "answer": "TikTok",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "Which seasonal coffee drink features pumpkin, cinnamon, and nutmeg flavors and is popular in the fall?",
+      "answer": "Pumpkin Spice Latte",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What fictional wizarding school is attended by characters such as Harry Potter, Ron Weasley, and Hermione Granger?",
+      "answer": "Hogwarts",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "What type of large, domesticated animal is known for pulling sleighs in snowy regions?",
+      "answer": "Reindeer",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "Which iconic fast-food chain is known for its Golden Arches logo?",
+      "answer": "McDonald's",
+      "category": "General",
+      "timestamp": "2025-05-30T21:35:12.510557Z",
+      "room_name": "FastJaguar"
+    },
+    {
+      "question": "Which movie features the character Tyler Durden who starts an underground fighting club?",
+      "answer": "Fight Club",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "What classic car model is often associated with James Bond in the early films?",
+      "answer": "Aston Martin DB5",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "Which fruit is traditionally used in a British dessert called 'Eton Mess'?",
+      "answer": "Strawberries",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "What famous rock band formed in 1968 and includes members Jimmy Page, Robert Plant, and John Bonham?",
+      "answer": "Led Zeppelin",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "Which painting by Edvard Munch features a figure with an agonized expression against a turbulent orange sky?",
+      "answer": "The Scream",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "In which city would you find the ancient Parthenon temple?",
+      "answer": "Athens",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "Which animated TV series features siblings on summer vacation with a platypus as a pet?",
+      "answer": "Phineas and Ferb",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "What popular card game involves players competing to win tricks and bidding for the number of tricks they will win?",
+      "answer": "Bridge",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "Which element is named after the man who discovered penicillin?",
+      "answer": "Flerovium",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "What type of hat is traditionally worn by chefs and is known for its tall, pleated design?",
+      "answer": "Toque",
+      "category": "General",
+      "timestamp": "2025-05-31T00:25:10.517346Z",
+      "room_name": "BrightPanther"
+    },
+    {
+      "question": "Which famous scientist developed the theory of general relativity?",
+      "answer": "Albert Einstein",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "In what year did the Titanic sink during its maiden voyage?",
+      "answer": "1912",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "What is the largest desert in the world?",
+      "answer": "Antarctic Desert",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "Which musical features the song 'The Circle of Life'?",
+      "answer": "The Lion King",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "answer": "Tokyo",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "Which artist is known for the famous sculpture 'The Thinker'?",
+      "answer": "Auguste Rodin",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "What substance gives skin and hair its color?",
+      "answer": "Melanin",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "Which novel features the character of Elizabeth Bennet?",
+      "answer": "Pride and Prejudice",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "What is the largest mammal currently living on Earth?",
+      "answer": "Blue Whale",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "Which month is Black History Month celebrated in the United States?",
+      "answer": "February",
+      "category": "General",
+      "timestamp": "2025-05-31T00:29:11.580110Z",
+      "room_name": "WildLion"
+    },
+    {
+      "question": "Which planet in our solar system rotates on its side with a tilt of about 98 degrees?",
+      "answer": "Uranus",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "In the world of literature, what is the term for a novel that features characters growing and developing over time, often a coming-of-age story?",
+      "answer": "Bildungsroman",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "What nutrient, found in spinach and liver, is crucial for red blood cell production and preventing anemia?",
+      "answer": "Iron",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "Who was the first female aviator to fly solo across the Atlantic Ocean?",
+      "answer": "Amelia Earhart",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "What is the culinary term for a soup made with shellfish, typically thickened with cream and roux?",
+      "answer": "Bisque",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "What music genre, originating in the late 19th to early 20th century in the Deep South of the USA, is characterized by its use of blues notes and specific chord progressions?",
+      "answer": "Blues",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "Which oceanic phenomenon occurs when unusually warm ocean temperatures in the Equatorial Pacific lead to climatic changes worldwide?",
+      "answer": "El Niño",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "Which fruit, known for its milky latex that can cause latex-fruit syndrome, is also called the 'Jack Tree' fruit?",
+      "answer": "Jackfruit",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "Which French term describes a thin, rich, flavorful custard sauce often served with desserts?",
+      "answer": "Crème anglaise",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "What is the largest species of marsupial, native to Australia?",
+      "answer": "Red Kangaroo",
+      "category": "General",
+      "timestamp": "2025-05-31T00:32:00.709989Z",
+      "room_name": "FastEagle"
+    },
+    {
+      "question": "Which artist is famous for the technique of painting small dots of color to form an image, known as pointillism?",
+      "answer": "Georges Seurat",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "What is the name of the famous ship that inspired the movie 'Pirates of the Caribbean' and was commanded by Blackbeard?",
+      "answer": "Queen Anne's Revenge",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "Which ancient Greek philosopher tutored Alexander the Great and is known for his contributions to many fields of knowledge?",
+      "answer": "Aristotle",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "Which landmark innovation involved the production of goods using interchangeable parts and made manufacturing more efficient?",
+      "answer": "Assembly line",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "What comic book superhero is known as the 'Man of Steel'?",
+      "answer": "Superman",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "Which European city is famously split by canals, often called the 'Venice of the North'?",
+      "answer": "Amsterdam",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "Which book series features a character named Katniss Everdeen who volunteers for a televised fight to the death?",
+      "answer": "The Hunger Games",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "What is the name of the process that turns a liquid into a solid when frozen, commonly seen with water?",
+      "answer": "Crystallization",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "Which celestial body is known for having a large, striking storm called the Great Red Spot?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "What French dish is made of layers of sliced potatoes, cream, and cheese, often baked until golden brown?",
+      "answer": "Gratin Dauphinois",
+      "category": "General",
+      "timestamp": "2025-05-31T00:34:38.720416Z",
+      "room_name": "QuickLynx"
+    },
+    {
+      "question": "What currency is used in Japan?",
+      "answer": "Yen",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which country is home to the endangered giant panda?",
+      "answer": "China",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the main ingredient in traditional hummus?",
+      "answer": "Chickpeas",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Who composed the music for the opera 'The Magic Flute'?",
+      "answer": "Wolfgang Amadeus Mozart",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the smallest planet in our solar system by diameter?",
+      "answer": "Mercury",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which U.S. city is known as the 'Windy City'?",
+      "answer": "Chicago",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What sporting event features a race of 26.2 miles?",
+      "answer": "Marathon",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Who wrote the novel '1984'?",
+      "answer": "George Orwell",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which country is famous for the kangaroo?",
+      "answer": "Australia",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What language is primarily spoken in Brazil?",
+      "answer": "Portuguese",
+      "category": "General",
+      "timestamp": "2025-05-31T00:44:32.606666Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "In tennis, what is the term for a score of zero?",
+      "answer": "Love",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which planet is known for having the most extensive ring system?",
+      "answer": "Saturn",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What year did the Berlin Wall fall, signaling the end of the Cold War division in Europe?",
+      "answer": "1989",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which popular video game's objective is to build, destroy, and survive in a blocky world?",
+      "answer": "Minecraft",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "In Greek mythology, who is known as the messenger of the gods, often depicted with winged sandals?",
+      "answer": "Hermes",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What is the name of the largest ocean on Earth?",
+      "answer": "Pacific Ocean",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What instrument in an orchestra is known for its deep, rich sound and has four strings?",
+      "answer": "Cello",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which city is famous for its iconic carnival where participants parade in elaborate costumes?",
+      "answer": "Rio de Janeiro",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "What iconic sci-fi TV series features a starship exploring new worlds, overseen by Captain Kirk and Spock?",
+      "answer": "Star Trek",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Who was the lead singer of the British rock band Queen?",
+      "answer": "Freddie Mercury",
+      "category": "General",
+      "timestamp": "2025-05-31T00:46:08.365673Z",
+      "room_name": "BrightFox"
+    },
+    {
+      "question": "Which African country is known for its traditional dish called 'Bunny Chow'?",
+      "answer": "South Africa",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What European city is famous for its annual Tomato Fight festival known as 'La Tomatina'?",
+      "answer": "Buñol, Spain",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "In which popular video game franchise do you navigate through the fictional city of Rapture?",
+      "answer": "BioShock",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which beverage is made by fermenting honey with water, sometimes with various fruits and spices?",
+      "answer": "Mead",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which famous painter cut off part of his own ear and is known for the artwork 'Starry Night'?",
+      "answer": "Vincent van Gogh",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the primary ingredient for making the Japanese dish 'soba'?",
+      "answer": "Buckwheat",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which iconic rock song was inspired by a road sign on the legend Ray Davies' cross-country trip?",
+      "answer": "Kokomo (The Beach Boys)",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "In which city would you find the historic landmark the 'Colosseum'?",
+      "answer": "Rome, Italy",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What unique instrument did Clara Rockmore famously play, known for its eerie, ethereal sound?",
+      "answer": "Theremin",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What cocktail, made with gin and tonic water, was originally used to make the medicine quinine more palatable?",
+      "answer": "Gin and Tonic",
+      "category": "General",
+      "timestamp": "2025-05-31T00:49:41.935179Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which 1980s arcade game features characters named Blinky, Pinky, Inky, and Clyde?",
+      "answer": "Pac-Man",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the main alcoholic ingredient in a traditional 'Old Fashioned' cocktail?",
+      "answer": "Bourbon",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which iconic animated series features characters like Peter, Lois, and Stewie Griffin?",
+      "answer": "Family Guy",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which British rock band was formed by brothers Noel and Liam Gallagher?",
+      "answer": "Oasis",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which historical period of peace and prosperity in the Roman Empire lasted approximately 200 years?",
+      "answer": "Pax Romana",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the name of the actor who portrayed Iron Man in the Marvel Cinematic Universe?",
+      "answer": "Robert Downey Jr.",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the iconic French landmark completed in 1889 as part of the World's Fair?",
+      "answer": "Eiffel Tower",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which popular social media platform restricts posts to 280 characters?",
+      "answer": "Twitter",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the largest island in the Mediterranean Sea?",
+      "answer": "Sicily",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which epic fantasy series begins with the book 'A Game of Thrones'?",
+      "answer": "A Song of Ice and Fire",
+      "category": "General",
+      "timestamp": "2025-05-31T00:50:56.436123Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What year marks the beginning of the modern Olympic Games era?",
+      "answer": "1896",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which novel features the fictional country of 'Ruritania'?",
+      "answer": "The Prisoner of Zenda",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "In which film does Audrey Hepburn's character shop at Tiffany's?",
+      "answer": "Breakfast at Tiffany's",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which element is named after the Norse god of thunder?",
+      "answer": "Thorium",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What animal is associated with the Chinese zodiac sign for those born in 1993?",
+      "answer": "Rooster",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which island nation in the Caribbean uses the currency called the Barbadian dollar?",
+      "answer": "Barbados",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What famous poet wrote the line 'To be or not to be, that is the question'?",
+      "answer": "William Shakespeare",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which chess piece can only move diagonally?",
+      "answer": "Bishop",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What is the name of the highest waterfall in the world, located in Venezuela?",
+      "answer": "Angel Falls",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which iconic video game character is known for collecting rings?",
+      "answer": "Sonic the Hedgehog",
+      "category": "General",
+      "timestamp": "2025-05-31T00:52:55.215922Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What animal is known for laughing and is often found in groups called clans?",
+      "answer": "Hyena",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which historical figure was known for his role in the Boston Tea Party and famous midnight ride?",
+      "answer": "Paul Revere",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What gemstone is known as the 'queen of gems' and is associated with the month of October?",
+      "answer": "Opal",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which beverage is traditionally served in a cask known as a 'firkin'?",
+      "answer": "Ale",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What programming language is named after a British TV comedy sketch series?",
+      "answer": "Python",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What natural event is measured using the Beaufort scale?",
+      "answer": "Wind speed",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which city is famous for its iconic Bayside Marketplace and Art Deco Historic District?",
+      "answer": "Miami",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What is the main sport played at Wimbledon?",
+      "answer": "Tennis",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "Which U.S. state is known for having a 'Lone Star' on its flag?",
+      "answer": "Texas",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What chemical element was first discovered on the Sun before being found on Earth?",
+      "answer": "Helium",
+      "category": "General",
+      "timestamp": "2025-05-31T00:53:36.867170Z",
+      "room_name": "EpicWolf"
+    },
+    {
+      "question": "What ancient structure, a wonder of the world, was built as a tomb for an Egyptian pharaoh around 2560 BCE?",
+      "answer": "The Great Pyramid of Giza",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "Which popular fruit shares its name with a color often used on road safety signs?",
+      "answer": "Orange",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "What is the main alcoholic ingredient in a classic Moscow Mule cocktail?",
+      "answer": "Vodka",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "Which 1990 film featured a character named Kevin McCallister and his adventures during a family vacation?",
+      "answer": "Home Alone",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "What U.S. city is famously known for its skyline containing the Space Needle?",
+      "answer": "Seattle",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "Which book series features a magical wardrobe leading to a parallel world called Narnia?",
+      "answer": "The Chronicles of Narnia",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "What is the Japanese art of folding paper into decorative shapes and figures called?",
+      "answer": "Origami",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "Which famous scientist is renowned for his theory of evolution and wrote 'On the Origin of Species'?",
+      "answer": "Charles Darwin",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "What traditional French pastry is known for its buttery, flaky layers and is often enjoyed with coffee?",
+      "answer": "Croissant",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "In which movie does the iconic DeLorean car serve as a time machine?",
+      "answer": "Back to the Future",
+      "category": "General",
+      "timestamp": "2025-05-31T00:54:57.072836Z",
+      "room_name": "HappyHawk"
+    },
+    {
+      "question": "What animal is known for its ability to rotate its head almost 360 degrees?",
+      "answer": "Owl",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which Marvel superhero is known for wielding a hammer named Mjolnir?",
+      "answer": "Thor",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What Italian city is famous for its leaning tower?",
+      "answer": "Pisa",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which element on the periodic table has the atomic number 1?",
+      "answer": "Hydrogen",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which board game features a Cuban island and includes resources like wood, wheat, and sheep?",
+      "answer": "Catan",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which famous former wrestler became a popular action movie star with the nickname 'The Rock'?",
+      "answer": "Dwayne Johnson",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the name of the fictional British spy whose code number is 007?",
+      "answer": "James Bond",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which American holiday is celebrated on the fourth Thursday of November?",
+      "answer": "Thanksgiving",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which popular streaming service boasts original series like 'Stranger Things' and 'The Crown'?",
+      "answer": "Netflix",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "Which instrument, often associated with Scotland, uses air blown into a bag to create music?",
+      "answer": "Bagpipes",
+      "category": "General",
+      "timestamp": "2025-05-31T01:10:40.397251Z",
+      "room_name": "SwiftCobra"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:47.409548Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T13:55:59.655620Z",
+      "room_name": "StrongLion"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T14:01:49.345609Z",
+      "room_name": "BoldDolphin"
+    },
+    {
+      "question": "Which cocktail is famously known for being stirred, not shaken, and associated with a British secret agent?",
+      "answer": "Martini",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What historic figure is known as the 'Father of Geometry'?",
+      "answer": "Euclid",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What physical phenomenon causes a floating object to experience an upward force equal to the weight of the fluid displaced?",
+      "answer": "Buoyancy",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "Which Shakespeare play features the characters of Puck and Oberon?",
+      "answer": "A Midsummer Night's Dream",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What type of music is characterized by ragged rhythms and syncopation and originated in African-American communities in the early 20th century?",
+      "answer": "Ragtime",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "Which inventor created the phonograph in 1877?",
+      "answer": "Thomas Edison",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What is the process by which plants make food using sunlight, carbon dioxide, and water?",
+      "answer": "Photosynthesis",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "Which mountain range extends through the western United States and Canada?",
+      "answer": "Rocky Mountains",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "In which book do the characters Piggy, Ralph, and Jack appear stranded on an uninhabited island?",
+      "answer": "Lord of the Flies",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What is the largest type of bear in the world, native to the Arctic region?",
+      "answer": "Polar Bear",
+      "category": "General",
+      "timestamp": "2025-06-06T14:30:35.650845Z",
+      "room_name": "BraveDolphin"
+    },
+    {
+      "question": "What type of tree produces the acorn?",
+      "answer": "Oak",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which musical instrument is played without being touched, using electromagnetic fields?",
+      "answer": "Theremin",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What novel features the character Holden Caulfield?",
+      "answer": "The Catcher in the Rye",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which small, nocturnal primate is known for its enormous eyes and ability to leap long distances?",
+      "answer": "Tarsier",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which chemical element is named after the city where Marie Curie conducted her research?",
+      "answer": "Polonium",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which famous ship was sunk by an iceberg on its maiden voyage in 1912?",
+      "answer": "Titanic",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What television show features a fictional paper company in Scranton, Pennsylvania?",
+      "answer": "The Office",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the term for a word that is spelled the same way backward as forward?",
+      "answer": "Palindrome",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What natural phenomenon is measured on the Richter scale?",
+      "answer": "Earthquake",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which classic rock band sang 'Stairway to Heaven'?",
+      "answer": "Led Zeppelin",
+      "category": "General",
+      "timestamp": "2025-06-06T14:46:51.761631Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Which director is known for films like 'Inception' and 'Interstellar'?",
+      "answer": "Christopher Nolan",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What 90s TV sitcom features a group of six friends living in Manhattan?",
+      "answer": "Friends",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What Toyota model was famously used as a time machine in 'Back to the Future'?",
+      "answer": "DeLorean",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which country is famous for the culinary dish 'paella'?",
+      "answer": "Spain",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What large mammal is known as the 'ship of the desert'?",
+      "answer": "Camel",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the main ingredient in a traditional pesto sauce?",
+      "answer": "Basil",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which novel by Herman Melville features the character Captain Ahab?",
+      "answer": "Moby-Dick",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which rock band originally performed the song 'Hotel California'?",
+      "answer": "Eagles",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which ancient civilization built the famous city of Machu Picchu?",
+      "answer": "Inca",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What color is the circle on the Japanese national flag?",
+      "answer": "Red",
+      "category": "General",
+      "timestamp": "2025-06-06T15:06:06.421590Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the most abundant gas in the Earth's atmosphere?",
+      "answer": "Nitrogen",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which famous physicist developed the theory of relativity?",
+      "answer": "Albert Einstein",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Who wrote the novel 'The Great Gatsby'?",
+      "answer": "F. Scott Fitzgerald",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+      "answer": "Venus",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "answer": "Canberra",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which 1999 film features the character Neo who discovers he is living in a simulated reality?",
+      "answer": "The Matrix",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "What geometric shape is used for stop signs?",
+      "answer": "Octagon",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which U.S. president is featured on the $5 bill?",
+      "answer": "Abraham Lincoln",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "In what year did the first human land on the Moon?",
+      "answer": "1969",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which famous explorer is credited with discovering America in 1492?",
+      "answer": "Christopher Columbus",
+      "category": "General",
+      "timestamp": "2025-06-06T15:13:42.101797Z",
+      "room_name": "CleverHawk"
+    },
+    {
+      "question": "Which iconic symbol of freedom in the United States was a gift from France?",
+      "answer": "Statue of Liberty",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "What is the currency used in the United Kingdom?",
+      "answer": "Pound Sterling",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "Which fictional detective resides at 221B Baker Street?",
+      "answer": "Sherlock Holmes",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "What is the name of the Roman goddess of love and beauty?",
+      "answer": "Venus",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "Which dance style originated in Argentina and is known for its dramatic and sensual moves?",
+      "answer": "Tango",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "What is the only continent without a desert?",
+      "answer": "Europe",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "Which author wrote the science fiction series 'Dune'?",
+      "answer": "Frank Herbert",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "Which sport is known as 'the beautiful game'?",
+      "answer": "Soccer",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "What is the main ingredient in a traditional British 'bangers and mash'?",
+      "answer": "Sausages",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "Which historic landmark in India was built as a symbol of love by Mughal Emperor Shah Jahan?",
+      "answer": "Taj Mahal",
+      "category": "General",
+      "timestamp": "2025-06-06T15:16:49.598177Z",
+      "room_name": "CoolBear"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:37.395891Z",
+      "room_name": "StrongBear"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T18:43:45.861419Z",
+      "room_name": "SmartCobra"
+    },
+    {
+      "question": "What is the main ingredient in traditional Japanese sake?",
+      "answer": "Rice",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which animal is known for having the strongest bite force in the animal kingdom?",
+      "answer": "Saltwater Crocodile",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What groundbreaking technology did the Wright brothers invent in 1903?",
+      "answer": "Airplane",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "In which city would you find the historic Alhambra palace?",
+      "answer": "Granada, Spain",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What mineral is the primary component of household salt?",
+      "answer": "Halite",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which famous novel begins with the line 'All happy families are alike; each unhappy family is unhappy in its own way'?",
+      "answer": "Anna Karenina",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which constellation is known as 'The Hunter' in Greek mythology?",
+      "answer": "Orion",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What is the most consumed fruit in the world by volume?",
+      "answer": "Banana",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which city hosted the first modern Olympic Games in 1896?",
+      "answer": "Athens",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "What is the highest-grossing animated film of all time as of 2023?",
+      "answer": "Frozen II",
+      "category": "General",
+      "timestamp": "2025-06-06T18:44:33.324569Z",
+      "room_name": "SwiftFalcon"
+    },
+    {
+      "question": "Which novel by George Orwell is set on a farm where animals revolt against their human owner?",
+      "answer": "Animal Farm",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which English rock band was fronted by singer Freddie Mercury?",
+      "answer": "Queen",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the chemical symbol for potassium?",
+      "answer": "K",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which U.S. state is known as the 'Empire State'?",
+      "answer": "New York",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the primary ingredient in the French dish 'bouillabaisse'?",
+      "answer": "Fish",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which blood type is known as the universal donor?",
+      "answer": "O negative",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the capital of the Canadian province of British Columbia?",
+      "answer": "Victoria",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "In Greek mythology, who is the goddess of wisdom and warfare?",
+      "answer": "Athena",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which planet in our solar system is known for its prominent rings?",
+      "answer": "Saturn",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What was the first video game to feature Mario as a character?",
+      "answer": "Donkey Kong",
+      "category": "General",
+      "timestamp": "2025-06-06T19:44:49.267376Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the official language of Egypt?",
+      "answer": "Arabic",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which mythical creature is said to live in a cave on Mount Olympus?",
+      "answer": "Cyclops",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What British band was known for the album 'Dark Side of the Moon'?",
+      "answer": "Pink Floyd",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which planet is closest in size to Earth?",
+      "answer": "Venus",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Who was the lead singer of Nirvana?",
+      "answer": "Kurt Cobain",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the name of the largest ocean current in the world?",
+      "answer": "Antarctic Circumpolar Current",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What historical event is celebrated on Bastille Day in France?",
+      "answer": "Storming of the Bastille",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which popular book series features the Targaryen family?",
+      "answer": "A Song of Ice and Fire",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the highest mountain in North America?",
+      "answer": "Denali",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "In which city can you find the iconic Christ the Redeemer statue?",
+      "answer": "Rio de Janeiro",
+      "category": "General",
+      "timestamp": "2025-06-06T19:49:07.931730Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which holiday celebrates the end of slavery in the United States on June 19th each year?",
+      "answer": "Juneteenth",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Who was the lead singer of The Velvet Underground?",
+      "answer": "Lou Reed",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "In which city would you find Fisherman's Wharf, known for its seafood and seals?",
+      "answer": "San Francisco",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which small mammal, often found in northern habitats, is known for its complex burrow systems and white fur in winter?",
+      "answer": "Arctic Fox",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What term describes a book's introductory section that is often written by someone other than the author?",
+      "answer": "Foreword",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What popular brand of cookies shares its name with a Roman goddess of dawn?",
+      "answer": "Aurora",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which U.S. state is famous for its Derby, held annually in the city of Louisville?",
+      "answer": "Kentucky",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What American street food is famously wrapped in a soft, folded flatbread often filled with lettuce, tomato, and tzatziki sauce?",
+      "answer": "Gyro",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "Which element on the periodic table is named after the Latin name for Paris?",
+      "answer": "Lutetium",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the national sport of Japan, known for its heavyweight competitors?",
+      "answer": "Sumo Wrestling",
+      "category": "General",
+      "timestamp": "2025-06-06T19:55:11.431417Z",
+      "room_name": "BoldCobra"
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "In which year did World War II end?",
+      "answer": "1945",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the smallest country in the world?",
+      "answer": "Vatican City",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "How many continents are there?",
+      "answer": "7",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "answer": "Nile",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "What gas do plants absorb from the atmosphere?",
+      "answer": "Carbon dioxide",
+      "category": "General",
+      "timestamp": "2025-06-06T22:59:06.313914Z",
+      "room_name": "HappyFox"
+    },
+    {
+      "question": "Which fictional city is the setting for Batman's crime-fighting activities?",
+      "answer": "Gotham City",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What is the name of Shakespeare's play about a Moorish general in the Venetian army?",
+      "answer": "Othello",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What is the term for a word or phrase that reads the same backward and forward?",
+      "answer": "Palindrome",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "Which type of tree is known for producing conkers?",
+      "answer": "Horse chestnut",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What is the highest-grossing movie of all time as of 2023?",
+      "answer": "Avatar",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "In the board game Clue, who is the character frequently depicted as a military man?",
+      "answer": "Colonel Mustard",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "Which British rock band released the album 'A Night at the Opera'?",
+      "answer": "Queen",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What is the smallest particle of a chemical element that retains its chemical properties?",
+      "answer": "Atom",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "Which planet in our solar system is known for having a massive storm called the Great Red Spot?",
+      "answer": "Jupiter",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What singer's fans are known as the 'Beyhive'?",
+      "answer": "Beyoncé",
+      "category": "General",
+      "timestamp": "2025-06-06T23:01:19.341220Z",
+      "room_name": "LuckyWolf"
+    },
+    {
+      "question": "What color is the cap of a traditional mushroom most commonly used in mushroom risotto?",
+      "answer": "White",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Who directed the film 'Pulp Fiction'?",
+      "answer": "Quentin Tarantino",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What element is represented by the symbol 'Pb' on the periodic table?",
+      "answer": "Lead",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which 1993 film features dinosaurs brought back to life through genetic engineering?",
+      "answer": "Jurassic Park",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which British city is famous for its university and boat race competition with Oxford?",
+      "answer": "Cambridge",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What is the main alcoholic ingredient in a traditional piña colada?",
+      "answer": "Rum",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "In mythology, who is the Norse god of mischief?",
+      "answer": "Loki",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What is the name of the largest continent by land area?",
+      "answer": "Asia",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "Which famous artist is known for the painting 'The Starry Night'?",
+      "answer": "Vincent van Gogh",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What superhero is known as the 'Dark Knight'?",
+      "answer": "Batman",
+      "category": "General",
+      "timestamp": "2025-06-06T23:16:42.202797Z",
+      "room_name": "CoolEagle"
+    },
+    {
+      "question": "What is the main ingredient in the popular Middle Eastern dish falafel?",
+      "answer": "Chickpeas",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which legendary actor starred in the classic film 'Casablanca'?",
+      "answer": "Humphrey Bogart",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What natural disaster is measured by the Saffir-Simpson scale?",
+      "answer": "Hurricane",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which historical figure is depicted on the Statue of Liberty?",
+      "answer": "Libertas",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the main building block of proteins?",
+      "answer": "Amino acids",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which flower is known as the symbol of peace and purity in Buddhism?",
+      "answer": "Lotus",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the smallest bone in the human body?",
+      "answer": "Stapes (or stirrup bone)",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "Which artist painted 'The Last Supper'?",
+      "answer": "Leonardo da Vinci",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What planet is known for its stunning rings?",
+      "answer": "Saturn",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
+    },
+    {
+      "question": "What is the capital city of Canada?",
+      "answer": "Ottawa",
+      "category": "General",
+      "timestamp": "2025-06-13T16:48:35.449502Z",
+      "room_name": "CoolWolf"
     }
   ]
 }

@@ -10,6 +10,7 @@ interface Player {
   current_answer?: string;
   ready_for_next: boolean;
   is_ready_to_start: boolean;
+  is_host: boolean;
 }
 
 interface PlayerResult {
@@ -39,6 +40,15 @@ interface GameMessage {
   player_id_skipped?: string;
 }
 
+interface TriviaSettings {
+  instructions: string;
+  category: string;
+  difficulty: number;
+  num_of_questions: number;
+  age_group: string;
+  hint_level: string;
+}
+
 enum GameState {
   HOME = 'home',
   JOIN_ROOM = 'join_room',
@@ -48,8 +58,52 @@ enum GameState {
   FINAL_SCORES = 'final_scores'
 }
 
-const API_BASE = 'http://localhost:3001/api';
-const WS_URL = 'ws://localhost:3001/ws';
+// Dynamic API configuration
+const getApiConfig = () => {
+  // Check if we're running with custom environment variables
+  const customApiUrl = process.env.REACT_APP_API_BASE_URL;
+  const customWsUrl = process.env.REACT_APP_WS_URL;
+  
+  if (customApiUrl && customWsUrl) {
+    return {
+      API_BASE: customApiUrl,
+      WS_URL: customWsUrl
+    };
+  }
+  
+  // Auto-detect based on current location
+  const protocol = window.location.protocol;
+  const hostname = window.location.hostname;
+  const isLocalhost = hostname === 'localhost' || hostname === '127.0.0.1';
+  
+  if (isLocalhost) {
+    // Local development
+    return {
+      API_BASE: 'http://localhost:3001/api',
+      WS_URL: 'ws://localhost:3001/ws'
+    };
+  } else if (hostname.includes('ngrok')) {
+    // Ngrok tunnel - assume backend is on same domain with /api prefix
+    const baseUrl = `${protocol}//${hostname}`;
+    const wsProtocol = protocol === 'https:' ? 'wss:' : 'ws:';
+    return {
+      API_BASE: `${baseUrl}/api`,
+      WS_URL: `${wsProtocol}//${hostname}/ws`
+    };
+  } else {
+    // Network access - assume backend is on same host but port 3001
+    const port = window.location.port ? `:${window.location.port}` : '';
+    const backendPort = '3001';
+    return {
+      API_BASE: `${protocol}//${hostname}:${backendPort}/api`,
+      WS_URL: `ws://${hostname}:${backendPort}/ws`
+    };
+  }
+};
+
+const { API_BASE, WS_URL } = getApiConfig();
+
+console.log('Using API configuration:', { API_BASE, WS_URL });
 
 // localStorage utilities
 const STORAGE_KEY = 'trivia_player_name';
@@ -204,6 +258,9 @@ function GameRoom() {
   const wsRef = useRef<WebSocket | null>(null);
   const [isHost, setIsHost] = useState(false);
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
+  const [triviaSettings, setTriviaSettings] = useState<TriviaSettings | null>(null);
+  const [isReturningToLobby, setIsReturningToLobby] = useState(false);
+  const [questionsReady, setQuestionsReady] = useState(false);
 
   const fetchAllPlayers = useCallback(async (currentRoomName: string | undefined) => {
     if (!currentRoomName) return;
@@ -254,6 +311,13 @@ function GameRoom() {
                 p.id === message.player_id ? { ...p, is_ready_to_start: message.is_ready! } : p
               )
             );
+            // Also update currentPlayer if this message is about the current player
+            setCurrentPlayer(prevCurrentPlayer => {
+              if (prevCurrentPlayer && prevCurrentPlayer.id === message.player_id) {
+                return { ...prevCurrentPlayer, is_ready_to_start: message.is_ready! };
+              }
+              return prevCurrentPlayer;
+            });
           }
           break;
         case 'GameStarted':
@@ -279,9 +343,44 @@ function GameRoom() {
           setIsReadyForNext(false);
           setGameState(GameState.RESULTS);
           break;
+        case 'ScoreAdjusted':
+          setResults(message.results || []);
+          break;
         case 'GameEnded':
           setFinalScores(message.final_scores || []);
           setGameState(GameState.FINAL_SCORES);
+          break;
+        case 'ReturnedToLobby':
+          // Reset all game state and return to waiting lobby
+          setGameState(GameState.WAITING);
+          setCurrentQuestion('');
+          setQuestionNumber(0);
+          setAnswer('');
+          setSubmittedAnswer('');
+          setHasSubmitted(false);
+          setIsReadyForNext(false);
+          setResults([]);
+          setFinalScores([]);
+          setCorrectAnswer('');
+          setIsReturningToLobby(false);
+          setQuestionsReady(false); // Questions are being generated in background
+          // Update currentPlayer's ready state to false
+          setCurrentPlayer(prevCurrentPlayer => {
+            if (prevCurrentPlayer) {
+              return { ...prevCurrentPlayer, is_ready_to_start: false };
+            }
+            return prevCurrentPlayer;
+          });
+          // Fetch updated player list to get reset ready states
+          if (roomName) {
+            fetchAllPlayers(roomName);
+          }
+          break;
+        case 'QuestionsReady':
+          setQuestionsReady(true);
+          if (typeof message.num_questions === 'number' && message.num_questions > 0) {
+            setFixedNumQuestions(message.num_questions);
+          }
           break;
       }
     };
@@ -318,6 +417,7 @@ function GameRoom() {
       await fetchAllPlayers(roomName);
       
       setGameState(GameState.WAITING);
+      setQuestionsReady(false); // Questions will be generated in background
       connectWebSocket(); // connectWebSocket is now stable
     } catch (error) {
       console.error('Failed to join room:', error);
@@ -341,6 +441,7 @@ function GameRoom() {
       await fetchAllPlayers(roomName);
       
       setGameState(GameState.WAITING);
+      setQuestionsReady(false); // Questions will be generated in background
       connectWebSocket(); // connectWebSocket is now stable
     } catch (error) {
       console.error('Failed to join room:', error);
@@ -378,6 +479,21 @@ function GameRoom() {
       }
     };
   }, []); // Empty dependency array ensures this runs only on mount and unmount (for cleanup)
+
+  // Fetch trivia settings
+  const fetchTriviaSettings = useCallback(async () => {
+    try {
+      const response = await axios.get(`${API_BASE}/trivia-settings`);
+      setTriviaSettings(response.data);
+    } catch (error) {
+      console.error('Failed to fetch trivia settings:', error);
+    }
+  }, []);
+
+  // Fetch trivia settings on mount
+  useEffect(() => {
+    fetchTriviaSettings();
+  }, [fetchTriviaSettings]);
 
   const renderJoinRoomScreen = () => (
     <div className="screen join-room-screen">
@@ -424,13 +540,46 @@ function GameRoom() {
           📋 Copy Room Name
         </button>
       </div>
+      
+      {triviaSettings && (
+        <div className="game-settings-section">
+          <h3>🎯 Game Settings</h3>
+          <div className="settings-grid">
+            <div className="setting-item">
+              <span className="setting-label">Category:</span>
+              <span className="setting-value">{triviaSettings.category}</span>
+            </div>
+            <div className="setting-item">
+              <span className="setting-label">Difficulty:</span>
+              <span className="setting-value">{triviaSettings.difficulty}/10</span>
+            </div>
+            <div className="setting-item">
+              <span className="setting-label">Questions:</span>
+              <span className="setting-value">{triviaSettings.num_of_questions}</span>
+            </div>
+            <div className="setting-item">
+              <span className="setting-label">Age Group:</span>
+              <span className="setting-value">{triviaSettings.age_group}</span>
+            </div>
+            <div className="setting-item">
+              <span className="setting-label">Hint Level:</span>
+              <span className="setting-value">{triviaSettings.hint_level}/10</span>
+            </div>
+            <div className="setting-item instructions-item">
+              <span className="setting-label">AI Personality:</span>
+              <span className="setting-value">{triviaSettings.instructions}</span>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <h2>Players Joined:</h2>
       <div className="players-list">
         {players.map(player => (
           <div key={player.id} className={`player-item ${player.is_ready_to_start ? 'ready' : 'not-ready'}`}>
             {player.name}
             {player.id === currentPlayer?.id && ' (You)'}
-            {isHost && player.id === currentPlayer?.id && <span className="host-tag"> - HOST</span>}
+            {player.is_host && <span className="host-tag"> - HOST</span>}
             <span className="ready-status">
               {player.is_ready_to_start ? '✅ Ready' : '⏳ Not Ready'}
             </span>
@@ -448,10 +597,23 @@ function GameRoom() {
         </button>
       )}
       
+      {!questionsReady && (
+        <div className="questions-loading">
+          <p className="waiting-message">
+            <span className="waiting-icon">🧠</span>
+            Generating fresh trivia questions...
+          </p>
+        </div>
+      )}
+      
       <p className="waiting-message">
         <span className="waiting-icon">⏳</span>
-        Game will start automatically when all players are ready.
-        ({players.filter(p => p.is_ready_to_start).length}/{players.length} players ready)
+        {questionsReady 
+          ? `Game will start automatically when all players are ready.
+             (${players.filter(p => p.is_ready_to_start).length}/${players.length} players ready)`
+          : `Preparing questions... Game will be ready to start once questions are generated and all players are ready.
+             (${players.filter(p => p.is_ready_to_start).length}/${players.length} players ready)`
+        }
       </p>
       {isHost && players.length < 1 && (
          <p className="waiting-message small-text">Minimum 1 player to start.</p>
@@ -536,19 +698,48 @@ function GameRoom() {
                     {getResultIcon()}
                   </span>
                 </div>
+                {currentPlayer?.is_host && (
+                  <div className="score-adjustment-controls">
+                    <button 
+                      onClick={() => adjustScore(result.player_name, -1)}
+                      className="adjust-score-button adjust-down"
+                      disabled={result.correctness === 'Wrong'}
+                      title="Downgrade score"
+                    >
+                      −
+                    </button>
+                    <button 
+                      onClick={() => adjustScore(result.player_name, 1)}
+                      className="adjust-score-button adjust-up"
+                      disabled={result.correctness === 'Correct'}
+                      title="Upgrade score"
+                    >
+                      +
+                    </button>
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
         
-        {!isReadyForNext ? (
-          <button onClick={readyForNext} className="next-button">
-            Ready for Next Question
-          </button>
+        {currentPlayer?.is_host ? (
+          !isReadyForNext ? (
+            <button onClick={readyForNext} className="next-button">
+              {questionNumber >= fixedNumQuestions ? 'View Final Results' : 'Continue to Next Question'}
+            </button>
+          ) : (
+            <div className="waiting-message">
+              <span className="waiting-icon">⏳</span>
+              {questionNumber >= fixedNumQuestions ? 'Loading final results...' : 'Loading next question...'}
+            </div>
+          )
         ) : (
           <div className="waiting-message">
             <span className="waiting-icon">⏳</span>
-            Waiting for other players to be ready...
+            {questionNumber >= fixedNumQuestions 
+              ? 'Waiting for host to view final results...' 
+              : 'Waiting for host to continue to next question...'}
           </div>
         )}
       </div>
@@ -556,9 +747,10 @@ function GameRoom() {
   };
 
   const renderFinalScoresScreen = () => {
-    const sortedScores = [...finalScores].sort((a, b) => b.score - a.score);
-    const currentPlayerDetails = sortedScores.find(p => p.id === currentPlayer?.id);
-    const currentPlayerRank = currentPlayerDetails ? sortedScores.indexOf(currentPlayerDetails) + 1 : -1;
+    // Sort players by score (descending)
+    const sortedPlayers = [...finalScores].sort((a, b) => b.score - a.score);
+    const currentPlayerDetails = sortedPlayers.find(p => p.id === currentPlayer?.id);
+    const currentPlayerRank = currentPlayerDetails ? sortedPlayers.indexOf(currentPlayerDetails) + 1 : -1;
     
     return (
       <div className="screen final-scores-screen">
@@ -617,7 +809,7 @@ function GameRoom() {
         <div className="final-leaderboard">
           <h2>🏆 Final Leaderboard</h2>
           <div className="scores-list">
-            {sortedScores.map((player, index) => (
+            {sortedPlayers.map((player, index) => (
               <div key={player.id} className={`score-item ${index === 0 ? 'winner' : ''} ${index < 3 ? 'podium' : ''}`}>
                 <span className="rank">
                   {index === 0 && '🥇'}
@@ -625,7 +817,11 @@ function GameRoom() {
                   {index === 2 && '🥉'}
                   {index > 2 && `#${index + 1}`}
                 </span>
-                <span className="player-name">{player.name}{player.id === currentPlayer?.id && " (You)"}</span>
+                <span className="player-name">
+                  {player.name}
+                  {player.id === currentPlayer?.id && " (You)"}
+                  {player.is_host && <span className="host-tag"> - HOST</span>}
+                </span>
                 <span className="score">{player.score} / {fixedNumQuestions * 2}</span>
                 {index < 3 && (
                   <button 
@@ -641,9 +837,15 @@ function GameRoom() {
           </div>
         </div>
         
-        <button onClick={() => window.location.reload()} className="play-again-button">
-          🔄 Play Again
-        </button>
+        {currentPlayer?.is_host && (
+          <button 
+            onClick={returnToLobby} 
+            className="return-to-lobby-button"
+            disabled={isReturningToLobby}
+          >
+            {isReturningToLobby ? '⏳ Returning to Lobby...' : '🏠 Return to Lobby'}
+          </button>
+        )}
       </div>
     );
   };
@@ -699,6 +901,43 @@ function GameRoom() {
     } catch (error) {
       console.error('Failed to toggle ready state:', error);
       alert('Failed to toggle ready state. Please try again.');
+    }
+  };
+
+  const returnToLobby = async () => {
+    if (!currentPlayer || !roomName) {
+      return;
+    }
+    
+    setIsReturningToLobby(true);
+    try {
+      await axios.post(`${API_BASE}/return-to-lobby`, {
+        player_id: currentPlayer.id,
+        room_name: roomName
+      });
+    } catch (error) {
+      console.error('Failed to return to lobby:', error);
+      alert('Failed to return to lobby. Please try again.');
+    } finally {
+      setIsReturningToLobby(false);
+    }
+  };
+
+  const adjustScore = async (targetPlayerName: string, adjustment: number) => {
+    if (!currentPlayer || !roomName) {
+      return;
+    }
+    
+    try {
+      await axios.post(`${API_BASE}/adjust-score`, {
+        player_id: currentPlayer.id,
+        room_name: roomName,
+        target_player_name: targetPlayerName,
+        adjustment: adjustment
+      });
+    } catch (error) {
+      console.error('Failed to adjust score:', error);
+      alert('Failed to adjust score. Please try again.');
     }
   };
 

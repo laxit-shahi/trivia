@@ -1,191 +1,141 @@
-# 🧠 Trivia Game
+# 🎯 Trivia Game
 
-A real-time multiplayer trivia game built with React TypeScript frontend and Rust Axum backend. Players can join a game hosted on one machine and play together in real-time.
+A real-time multiplayer trivia game with AI-generated questions, featuring a sassy AI personality and comprehensive question logging to avoid duplicates.
 
-## Features
+## 🚀 Quick Start
 
-- **Real-time multiplayer**: Multiple players can join and play simultaneously
-- **WebSocket communication**: Instant updates for all players
-- **10 trivia questions**: Static set of questions covering various topics
-- **Score tracking**: Automatic scoring and final leaderboard
-- **Modern UI**: Beautiful, responsive design with smooth animations
-- **Host controls**: First player becomes the host and can start the game
+### One Script Does Everything!
 
-## Tech Stack
+#### Local Network Access (WiFi sharing)
+```bash
+./start-trivia.sh
+```
+- Starts both backend and frontend servers
+- Exposes them on your network (0.0.0.0)
+- Shows your IP address to share with friends
+- Your computer becomes the game server
+
+#### Public Internet Access (ngrok tunnels)
+```bash
+./start-trivia.sh --ngrok
+```
+- Does everything above PLUS
+- Creates public ngrok tunnels
+- Anyone on the internet can join
+- Shows public URLs to share
+
+### That's it! 🎉
+- Players join by visiting the game URL
+- No room codes needed - automatic room system
+- Press Ctrl+C to stop everything
+
+## 📋 Prerequisites
+
+- **Rust & Cargo**: Install from [rustup.rs](https://rustup.rs/)
+- **Node.js & npm**: Install from [nodejs.org](https://nodejs.org/)
+- **ngrok** (optional): Install with `brew install ngrok` or from [ngrok.com](https://ngrok.com/)
+
+## 🎮 How to Play
+
+1. **Start the app** using one of the commands above
+2. **Share the frontend URL** with friends
+3. **Join the room** - players automatically join the main room
+4. **Mark as ready** when all players have joined
+5. **Answer questions** as they appear
+6. **View results** after each question
+7. **See final scores** at the end
+
+## ⚙️ Game Settings
+
+The lobby displays current game settings:
+- **Category**: Food and Drinks
+- **Difficulty**: 10/10 (Expert level)
+- **Questions**: 10 per game
+- **Age Group**: 22-50
+- **Hint Level**: 0/10 (No hints)
+- **AI Personality**: 9/10 Sassy
+
+## 🌐 Access Options Explained
+
+### Local Only (`./start-trivia.sh`)
+- Frontend: `http://localhost:3000`
+- Backend: `http://localhost:3001`
+- **Who can access**: Only you on your computer
+
+### Network Access (`./start-trivia.sh --network`)
+- Frontend: `http://[YOUR-IP]:3000`
+- Backend: `http://[YOUR-IP]:3001`
+- **Who can access**: Anyone on your local network (WiFi/LAN)
+- **Find your IP**: `ifconfig` (macOS/Linux) or `ipconfig` (Windows)
+
+### Public Access (`./start-trivia.sh --ngrok`)
+- Frontend: `https://[random].ngrok.io`
+- Backend: `https://[random].ngrok.io`
+- **Who can access**: Anyone on the internet with the URL
+- **View URLs**: Check `http://localhost:4040` for ngrok dashboard
+
+## 🛠️ Manual Setup (Alternative)
+
+If you prefer to start services manually:
 
 ### Backend
-- **Rust** with **Axum** web framework
-- **WebSocket** support for real-time communication
-- **Tokio** for async runtime
-- **Serde** for JSON serialization
-- **CORS** enabled for cross-origin requests
+```bash
+cd backend
+# For local development only
+SHOPIFY_API_TOKEN=dummy cargo run
+
+# For network access (others can join)  
+HOST=0.0.0.0 SHOPIFY_API_TOKEN=dummy cargo run
+```
 
 ### Frontend
-- **React** with **TypeScript**
-- **Axios** for HTTP requests
-- **WebSocket** for real-time updates
-- **Modern CSS** with gradients and animations
-
-## Setup Instructions
-
-### Prerequisites
-- **Rust** (latest stable version)
-- **Node.js** (v16 or higher)
-- **npm** or **yarn**
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-```bash
-cd backend
-```
-
-2. Install dependencies and run the server:
-```bash
-cargo run
-```
-
-The backend server will start on `http://localhost:3001`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
 ```bash
 cd frontend
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
+# For local development
 npm start
+
+# For network access
+HOST=0.0.0.0 npm start
+
+# For ngrok (after getting backend URL)
+REACT_APP_API_BASE_URL=https://your-backend.ngrok.io/api \
+REACT_APP_WS_URL=wss://your-backend.ngrok.io/ws \
+npm run build && npx serve -s build -l 3000
 ```
 
-The frontend will start on `http://localhost:3000`
+## 🔧 Troubleshooting
 
-## How to Play
+### Ngrok Issues
+- Install ngrok: `brew install ngrok`
+- Sign up at ngrok.com for better reliability
+- Check ngrok dashboards at `http://localhost:4040` and `http://localhost:4041`
 
-### For the Host (First Player)
+### Network Access Not Working
+- Make sure your firewall allows connections on ports 3000 and 3001
+- Other devices must be on the same network (WiFi/LAN)
+- Try accessing `http://[your-ip]:3000` from another device
 
-1. Open your browser and go to `http://localhost:3000`
-2. Enter your name and click "Join Game"
-3. Wait for other players to join
-4. Click "Start Game" when ready
+## 🎯 Game Features
 
-### For Other Players
+- **Real-time Multiplayer**: Join games instantly, see live updates
+- **AI-Generated Questions**: Unique questions every game with smart duplicate prevention
+- **Sassy AI Personality**: 9/10 sassy trivia host for entertaining questions
+- **Question Logging**: All questions logged with timestamps to prevent repeats
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Single Room System**: Simplified joining - no room codes needed
+- **Live Scoring**: Real-time score updates and final leaderboards
+- **Victory Badges**: Download celebration badges for top 3 finishers
 
-1. Open your browser and go to `http://<HOST_IP>:3000` (replace `<HOST_IP>` with the host's IP address)
-2. Enter your name and click "Join Game"
-3. Wait for the host to start the game
+## 🔄 Stopping the Server
 
-### Game Flow
+Press `Ctrl+C` in the terminal running the script. It automatically:
+- Stops both frontend and backend servers
+- Closes any ngrok tunnels
+- Cleans up processes and ports
 
-1. **Joining**: Players enter their names and join the game
-2. **Waiting**: All players wait in a lobby until the host starts the game
-3. **Questions**: 10 questions are presented one by one
-4. **Answering**: Players type their answers and submit them
-5. **Results**: After everyone submits, results are shown with correct/incorrect indicators
-6. **Next Question**: Players click "Ready for Next Question" to continue
-7. **Final Scores**: After 10 questions, final scores and rankings are displayed
+## 📝 Technical Notes
 
-## Game Rules
-
-- **Exact Match**: Answers must exactly match the correct answer (case-insensitive)
-- **All Players**: Everyone must submit an answer before results are shown
-- **Ready Check**: All players must click "Ready for Next Question" to proceed
-- **Scoring**: 1 point per correct answer, maximum 10 points
-
-## Sample Questions
-
-The game includes 10 built-in questions covering:
-- Geography (capitals, countries, rivers)
-- Mathematics (basic arithmetic)
-- Science (planets, chemistry, biology)
-- History (World War II)
-- Art (famous paintings)
-- General knowledge
-
-## Network Setup
-
-### For Local Network Play
-
-1. Find the host machine's IP address:
-   - **Windows**: `ipconfig`
-   - **macOS/Linux**: `ifconfig` or `ip addr`
-
-2. Other players connect to: `http://<HOST_IP>:3000`
-
-3. Ensure firewall allows connections on port 3000
-
-### Port Configuration
-
-- **Backend**: Port 3001 (API and WebSocket)
-- **Frontend**: Port 3000 (React dev server)
-
-## Development
-
-### Backend Development
-
-```bash
-cd backend
-cargo watch -x run  # Auto-reload on changes
-```
-
-### Frontend Development
-
-```bash
-cd frontend
-npm start  # Auto-reload on changes
-```
-
-### Adding New Questions
-
-Edit the `create_questions()` function in `backend/src/main.rs`:
-
-```rust
-fn create_questions() -> Vec<Question> {
-    vec![
-        Question {
-            question: "Your question here?".to_string(),
-            answer: "Your answer here".to_string(),
-        },
-        // Add more questions...
-    ]
-}
-```
-
-## API Endpoints
-
-- `POST /api/join` - Join the game
-- `POST /api/start` - Start the game (host only)
-- `POST /api/submit-answer` - Submit an answer
-- `POST /api/ready-next` - Mark ready for next question
-- `GET /ws` - WebSocket connection for real-time updates
-
-## Troubleshooting
-
-### Common Issues
-
-1. **WebSocket connection failed**
-   - Check if backend is running on port 3001
-   - Verify firewall settings
-
-2. **Players can't join**
-   - Ensure all players use the correct IP address
-   - Check network connectivity
-
-3. **Game doesn't start**
-   - Only the first player (host) can start the game
-   - Ensure at least one player has joined
-
-### Logs
-
-- **Backend logs**: Check the terminal running `cargo run`
-- **Frontend logs**: Check browser developer console (F12)
-
-## License
-
-This project is open source and available under the MIT License. 
+- Backend uses a dummy API token for development
+- Questions are logged to `backend/questions.json`
+- Settings can be modified in `backend/src/llm.rs`
+- The app automatically handles player reconnections

@@ -1,10 +1,10 @@
 {
   "background": false,
-  "created_at": 1748546060,
+  "created_at": 1749833307,
   "error": null,
-  "id": "resp_6838b20cd15c819c99f02803a7c73cc30b640f4137583225",
+  "id": "resp_684c565b9b14819cb38e17d78c24b320044d1eeb6219c41f",
   "incomplete_details": null,
-  "instructions": "You are a super amazing life chaning trivia generator that is 9/10 sassy. 10 being the sassiest person in the world, 0being not sassy at all.",
+  "instructions": "You are the best and most loved bar trivia runner in the world. You generate questions that are appropriate for bar trivia. You review each question after generating it to check for inaccuracies or obvious hints. For example, you wouldn't use a clue like \"What is the term for when water is displaced by an object floating in it\" if the answer is Displacement. You also wouldn't have a question like \"What element is named after the city Marie Curie is from?\" where the answer is Polonium, because Poland is a country, not a city.",
   "max_output_tokens": null,
   "metadata": {},
   "model": "gpt-4o-2024-08-06",
@@ -14,11 +14,11 @@
       "content": [
         {
           "annotations": [],
-          "text": "{\"questions\":[{\"question\":\"What is the only type of rock that can float on water?\",\"answer\":\"Pumice\",\"hint\":\"\"},{\"question\":\"Which mammal is known to have the longest gestation period?\",\"answer\":\"African Elephant\",\"hint\":\"\"}]}",
+          "text": "{\"questions\":[{\"question\":\"What is the main ingredient in the popular Middle Eastern dish falafel?\",\"answer\":\"Chickpeas\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"Which legendary actor starred in the classic film 'Casablanca'?\",\"answer\":\"Humphrey Bogart\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"What natural disaster is measured by the Saffir-Simpson scale?\",\"answer\":\"Hurricane\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"Which historical figure is depicted on the Statue of Liberty?\",\"answer\":\"Libertas\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"What is the main building block of proteins?\",\"answer\":\"Amino acids\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"Which flower is known as the symbol of peace and purity in Buddhism?\",\"answer\":\"Lotus\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"What is the smallest bone in the human body?\",\"answer\":\"Stapes (or stirrup bone)\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"Which artist painted 'The Last Supper'?\",\"answer\":\"Leonardo da Vinci\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"What planet is known for its stunning rings?\",\"answer\":\"Saturn\",\"hint\":\"Hint to corresponding question\"}, {\"question\":\"What is the capital city of Canada?\",\"answer\":\"Ottawa\",\"hint\":\"Hint to corresponding question\"}]}",
           "type": "output_text"
         }
       ],
-      "id": "msg_6838b20d8424819ca9c7e0b88206d4ca0b640f4137583225",
+      "id": "msg_684c565c8194819c8f782afddcd37d83044d1eeb6219c41f",
       "role": "assistant",
       "status": "completed",
       "type": "message"
@@ -44,15 +44,15 @@
   "top_p": 1,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 228,
+    "input_tokens": 9545,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 57,
+    "output_tokens": 289,
     "output_tokens_details": {
       "reasoning_tokens": 0
     },
-    "total_tokens": 285
+    "total_tokens": 9834
   },
   "user": null
 }

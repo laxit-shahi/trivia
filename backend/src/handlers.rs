@@ -72,6 +72,26 @@ pub async fn ready_for_next(
     }
 }
 
+pub async fn adjust_score(
+    State(app_state): State<SharedAppState>,
+    Json(request): Json<AdjustScoreRequest>,
+) -> Result<StatusCode, StatusCode> {
+    let game_data_arc = {
+        let app = app_state.lock().unwrap();
+        app.rooms.get(&request.room_name).cloned()
+    };
+    
+    match game_data_arc {
+        Some(game_data) => {
+            match game::handle_score_adjustment(&game_data, &request.player_id, &request.target_player_name, request.adjustment) {
+                Ok(()) => Ok(StatusCode::OK),
+                Err(_) => Err(StatusCode::BAD_REQUEST),
+            }
+        }
+        None => Err(StatusCode::NOT_FOUND),
+    }
+}
+
 pub async fn generate_trivia() -> Result<String, StatusCode> {
     match llm::generate_trivia_questions().await {
         Ok(questions) => Ok(questions),
@@ -92,7 +112,7 @@ pub async fn create_room(
         }
     };
     
-    let (game_data_arc, response) = game::create_new_room(room_name.clone(), request.player_name);
+    let (game_data_arc, response) = game::create_new_room(room_name.clone(), request.player_name).await;
     
     {
         let mut app = app_state.lock().unwrap();
@@ -113,7 +133,7 @@ pub async fn join_room(
 
     match game_data_arc {
         Some(game_data) => {
-            match game::join_existing_room(&game_data, request.player_name, request.room_name) {
+            match game::join_existing_room(&game_data, request.player_name, request.room_name).await {
                 Ok(response) => Ok(Json(response)),
                 Err(_) => Err(StatusCode::BAD_REQUEST),
             }
@@ -135,7 +155,38 @@ pub async fn get_players_in_room(
         Some(game_data) => {
             let game = game_data.lock().unwrap();
             let players: Vec<Player> = game.players.values().cloned().collect();
+            
+            // Also send questions ready status if questions are ready
+            if game.questions_ready {
+                let num_questions = game.questions.len() as u32;
+                let _ = game.tx.send(GameMessage::QuestionsReady { num_questions });
+            }
+            
             Ok(Json(players))
+        }
+        None => Err(StatusCode::NOT_FOUND),
+    }
+}
+
+pub async fn get_trivia_settings() -> Result<Json<TriviaSettings>, StatusCode> {
+    Ok(Json(llm::get_trivia_settings()))
+}
+
+pub async fn return_to_lobby(
+    State(app_state): State<SharedAppState>,
+    Json(request): Json<ReturnToLobbyRequest>,
+) -> Result<StatusCode, StatusCode> {
+    let game_data_arc = {
+        let app = app_state.lock().unwrap();
+        app.rooms.get(&request.room_name).cloned()
+    };
+    
+    match game_data_arc {
+        Some(game_data) => {
+            match game::handle_return_to_lobby(&game_data, &request.player_id, &request.room_name).await {
+                Ok(()) => Ok(StatusCode::OK),
+                Err(_) => Err(StatusCode::BAD_REQUEST),
+            }
         }
         None => Err(StatusCode::NOT_FOUND),
     }
